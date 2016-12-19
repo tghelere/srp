@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        {* confirmar <meta http-equiv="Content-Language" content="pt-br" />*}
+        {* confirmar <meta name="language" content="pt-br" />*}
+        {* confirmar <meta http-equiv="X-UA-Compatible" content="IE=edge">*}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{$description}">
+        <meta name="keywords" content="{$keywords}" />
+        <meta name="robots" content="all" />
+        <meta name="author" content="{$author}">
+
+        <title>{$name} - {$slogan} - {$title}</title>
+
+        <link rel="canonical" href="{$canonical}" />
+
+        <style type="text/css" media="all">
+        	@import url({$rootUrl}/min/g=css);
+        </style>
+
+        <link rel="shortcut icon" href="{$img}favicon.ico">
+        <link rel="apple-touch-icon" href="{$img}apple-touch-icon.png">
+    </head>
+    <body class="{$thisController}">
+      <div id="fb-root"></div>
+      <div id="{if $thisController eq "index"}home{else}{$thisController}{/if}">
+        <header>
+          {if $banners}
+            {include file="includes/banners.html"}
+          {/if}
+          {include file="includes/menu.html"}
+        </header>
+        <section class="{if $thisController eq "index"}home{else}{$thisController}{/if} container">

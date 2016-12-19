@@ -1,0 +1,51 @@
+{include file="includes/header.html"}	
+<section id="contact">        
+    <div class="container bg-branco">
+        <div class="heading wow fadeInUp row text-center" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h1>Contato</h1>
+            <p>Para entrar em contato conosco, preencha o formulario abaixo com seus dados e sua mensagem. Entraremos em contato assim que possivel.</p>
+        </div>        
+        <div class="contact-form wow fadeIn row" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <form id="main-contact-form" name="contact-form" method="post" action="{$rootUrl}/contato/enviar/">
+                    <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" name="nome" class="form-control" placeholder="Nome" required="required" {if isset($nome)}value="{$nome}"{/if}>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="E-mail" required="required" {if isset($email)}value="{$email}"{/if}>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" name="assunto" class="form-control" placeholder="Assunto" required="required" {if isset($assunto)}value="{$assunto}"{/if}>
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <textarea name="msg" id="message" class="form-control" rows="4" placeholder="Escreva aqui sua mensagem" required="required" {if isset($msg)}value="{$msg}"{/if}></textarea>
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit" class="btn-submit">Enviar mensagem</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <h2>{$name}</h2>
+                    <h3>{$description}</h3>
+                    <ul class="address">
+                        <li><i class="fa fa-map-marker"></i><span> Endereço:</span> {$endContato}
+                            <br />CEP: {$cepContato} | {$localContato}</li>
+                        <li><i class="fa fa-phone"></i><span> Telefone:</span><a href="tel:{$foneContato}"> {$foneContato}</a></li>
+                        <li><i class="fa fa-envelope"></i><span> E-mail:</span><a href="mailto:{$emailContato}"> {$emailContato}</a></li>
+                        <li><i class="fa fa-globe"></i><span> Website:</span><a href="{$rootUrl}" title="{$name} - {$slogan}"> {$rootUrl}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{include file="includes/footer.html"}

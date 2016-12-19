@@ -1,0 +1,124 @@
+/*=========== RESET ==========*/
+* {margin: 0; padding: 0; font-size: 100%; border: none; outline: none; font-weight: 300; box-sizing: border-box;  font-family: 'Open Sans', sans-serif; }
+body{height:100%; font-family: 'Open Sans', sans-serif !important; }
+a {text-decoration: none !important;}
+ul {list-style: none;}
+img {max-width: 100%;}
+div{display: block;}
+h1, h2, h3, h4, h5{ font-family: 'Shadows Into Light Two' !important;}
+
+
+/*=========== CONTAINER ==========*/
+.container {width: 100%; float: left; text-align: center; min-height:100%; position:relative; display: block; margin: 0 auto;}
+
+
+/*=========== NANOBAR ==========*/
+
+div.nanobar div.bar { background: #31c1cd; border-radius: 3px; box-shadow: 0 0 6px #59d; height:2px; margin: 0 auto;}
+
+/*=========== Cores ==========*/
+.bg-verde{background-color:#31c1cd;}
+.cl-verde{color:#31c1cd;}
+.bg-azulclaro{background-color:#c0dbd2;}
+.cl-azulclaro{color:#c0dbd2;}
+.bg-cinza{background-color:#343434;}
+.cl-cinza{color:#343434;}
+.bg-black {background-color: #000; }
+.cl-black {color: #000; }
+.bg-white {background-color: #fff;}
+.cl-white {color: #fff;}
+.bg-cinza-img{background: url(img/bg.png) repeat; }
+
+
+
+
+
+/* Menu */
+div.menu .navbar-right li.active a { background-color: #31c1cd; color:#343434; }
+/*div.menu div.larg{ margin: 0 auto; width:70%;}*/
+div.menu a.logo,
+  div.menu a.logo h1,
+    div.menu a.logo h1 img{width:57px; height:43px; display: block; float: left;}
+div.menu a.logo h1 { margin: 8px 4px;  padding:0; }
+div.menu ul{padding:4px 0; margin-right:20px;}
+div.menu .nav li a {color:#fff; font-size: 12px; padding: 15px 13px; text-transform: uppercase;}
+div.menu .nav li a:hover {border: none; color:#31c1cd;  background-color: rgba(0,0,0,.6);}
+div.menu .navbar-toggle {border-radius: 0;}
+div.menu div#navbar-menu:hover, div.menu div#navbar-close:hover{ color:#000;}
+
+
+
+
+/* Banners */
+#banners { overflow: hidden; position: relative;}
+.carousel-fade .carousel-inner .item { opacity: 0; -webkit-transition-property: opacity; transition-property: opacity; background-repeat: no-repeat; background-size: cover; height: 2037px; }
+.carousel-fade .carousel-inner .item:after { content: " "; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.1); }
+.carousel-fade .carousel-inner .active { opacity: 1; }
+.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right { left: 0; opacity: 0; z-index: 1; }
+.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right { opacity: 1; }
+.carousel-fade .carousel-control { z-index: 2; }
+#banners .left-control, .right-control { position: absolute; top: 50%; height: 51px; width: 51px; line-height: 48px; border-radius: 50%; border:1px solid #fff; z-index: 20; font-size: 24px; color: #fff; text-align: center; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+#banners .left-control { left: -51px; }
+#banners .right-control { right: -51px; }
+#banners .left-control:hover,
+  #banners.right-control:hover { color:#a4dadf; background-color:#343434;}
+#banners:hover .left-control { left:30px; color:#31c1cd;}
+#banners:hover .right-control { right:30px; color:#31c1cd;}
+#banners .caption { position: absolute; padding: 0 10%; top: 30%; margin-top: -104px; left: 0; right: 0; text-align: center; text-transform: uppercase; z-index: 15; font-size: 18px; font-weight: 300; color: #fff; }
+#banners .caption h1 { color: #fff; font-size: 40px; margin-bottom: 30px; }
+#banners .caption .btn-start { color: #fff; font-size: 14px; font-weight: 600; padding:14px 40px; border: 1px solid #6e6d6c; border-radius: 4px; margin-top: 40px; }
+#banners .caption .btn-start:hover { color: #fff; }
+
+#banners div.home { background-color:rgba(49,193,204,.6);; padding: 50px;  position:relative ; margin:0 auto; width:40%; min-width:400px; top:20%;}
+#banners div.home img{ width:90%; height:90%; margin: 0 auto;}
+
+
+/* Footer */
+
+footer div.footer-top{height:250px; background: #606060 url(img/footer_01.png) no-repeat left top ; width:100%; float: left;}
+footer div.footer-top div.footer-list{max-width:80%; margin: 40px auto 0; }
+footer div.footer-top div.footer-list ul{}
+footer div.footer-top div.footer-list ul li{ color: #ffffff; font-size:10px;}
+footer div.footer-top div.footer-list ul li.title{ color:#a4dadf; text-transform: uppercase; padding-bottom:8px; font-size:12px; height:30px;}
+footer div.footer-top div.footer-list ul li a{ }
+footer div.footer-top div.footer-list ul li a.fb{url(img/footer_social_icones.png);}
+footer div.footer-top div.footer-list ul li a.ig{}
+footer div.footer-top div.footer-list ul li a.yt{}
+footer div.footer-top div.footer-list div.socials ul li a{height:25px; width: 25px; display: block; background-image:url(img/footer_social_icones.png) no-repeat top center;}
+footer div.footer-top div.footer-list div.socials ul li a.fb{}
+footer div.footer-top div.footer-list div.socials ul li a.ig{}
+footer div.footer-top div.footer-list div.socials ul li a.yt{}
+
+footer div.footer-bottom{height:20px; background: #363636; width:100%; float: left;}
+footer div.footer-bottom p{color:#fff; font-size:10px; padding-top:4px; margin:0 !important;}
+
+
+
+
+
+
+
+
+
+
+/* controller + div. para alterações no conteudo da pagina ou div# para alterações na pagina toda */
+div#home div.pilates{max-width:90%; padding:15px;}
+div.home div{}
+
+div#pilates div{}
+div.pilates div{}
+
+div#powerplate div{}
+div.powerplate div{}
+
+div#trx div{}
+div.trx div{}
+
+div#terapiasmanuais div{}
+div.terapiasmanuais div{}
+
+div#quemsomos div{}
+div.quemsomos div{}
+
+div#contato div{}
+div.contato div{}
