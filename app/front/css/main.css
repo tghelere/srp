@@ -35,7 +35,7 @@ div.nanobar div.bar { background: #31c1cd; border-radius: 3px; box-shadow: 0 0 6
 
 /* Menu */
 div.menu .navbar-right li.active a { background-color: #31c1cd; color:#343434; }
-/*div.menu div.larg{ margin: 0 auto; width:70%;}*/
+div.menu div.larg{ margin: 0 auto; width:70%;}
 div.menu a.logo,
   div.menu a.logo h1,
     div.menu a.logo h1 img{width:57px; height:43px; display: block; float: left;}
@@ -78,16 +78,21 @@ div.menu div#navbar-menu:hover, div.menu div#navbar-close:hover{ color:#000;}
 footer div.footer-top{height:250px; background: #606060 url(img/footer_01.png) no-repeat left top ; width:100%; float: left;}
 footer div.footer-top div.footer-list{max-width:80%; margin: 40px auto 0; }
 footer div.footer-top div.footer-list ul{}
-footer div.footer-top div.footer-list ul li{ color: #ffffff; font-size:10px;}
+footer div.footer-top div.footer-list ul li{ color: #ffffff; font-size:10px; width:100%;}
 footer div.footer-top div.footer-list ul li.title{ color:#a4dadf; text-transform: uppercase; padding-bottom:8px; font-size:12px; height:30px;}
-footer div.footer-top div.footer-list ul li a{ }
-footer div.footer-top div.footer-list ul li a.fb{url(img/footer_social_icones.png);}
-footer div.footer-top div.footer-list ul li a.ig{}
-footer div.footer-top div.footer-list ul li a.yt{}
-footer div.footer-top div.footer-list div.socials ul li a{height:25px; width: 25px; display: block; background-image:url(img/footer_social_icones.png) no-repeat top center;}
-footer div.footer-top div.footer-list div.socials ul li a.fb{}
-footer div.footer-top div.footer-list div.socials ul li a.ig{}
-footer div.footer-top div.footer-list div.socials ul li a.yt{}
+footer div.footer-top div.footer-list ul li a{color: #ffffff;}
+footer div.footer-top div.footer-list ul li a:hover{color: #a4dadf;}
+footer div.footer-top div.footer-list li.socials{ float:left; margin-bottom: 18px;}
+footer div.footer-top div.footer-list li.socials ul{min-width:105px;}
+footer div.footer-top div.footer-list li.socials ul li{width:35px; float: left;}
+footer div.footer-top div.footer-list li.socials ul li a{height:25px; width: 25px; background: url(img/footer_social_icones.png) no-repeat top left; display: block;}
+footer div.footer-top div.footer-list li.socials ul li a.yt{background-position: 0 -25px;}
+footer div.footer-top div.footer-list li.socials ul li a.yt:hover{background-position:0 0;;}
+footer div.footer-top div.footer-list li.socials ul li a.ig{background-position:0 -75px;}
+footer div.footer-top div.footer-list li.socials ul li a.ig:hover{background-position:0 -50px;}
+footer div.footer-top div.footer-list li.socials ul li a.fb{background-position: 0 -125px;}
+footer div.footer-top div.footer-list li.socials ul li a.fb:hover{background-position: 0 -100px;}
+footer div.footer-top div.footer-list li.socials ul li a span{display:none;}
 
 footer div.footer-bottom{height:20px; background: #363636; width:100%; float: left;}
 footer div.footer-bottom p{color:#fff; font-size:10px; padding-top:4px; margin:0 !important;}
@@ -103,6 +108,13 @@ footer div.footer-bottom p{color:#fff; font-size:10px; padding-top:4px; margin:0
 
 /* controller + div. para alterações no conteudo da pagina ou div# para alterações na pagina toda */
 div#home div.pilates{max-width:90%; padding:15px;}
+div#home div.ondeestamos{background:url(img/home_localizacao.jpg) no-repeat top center; height:300px; background-size: cover; margin-top:5px; margin-bottom:5px;}
+div#home div.ondeestamos p{ color:#fff; margin-bottom:20px;}
+div#home div.ondeestamos p.title{ color:#31c1cd; margin: 30px 0 0 !important; font-size:16px;}
+div#home div.ondeestamos h2{color:#31c1cd; margin:0 0 20px;}
+div#home div.ondeestamos .btn-home{background-color:#31c1cd; margin-left:40px;}
+div#home div.ondeestamos .btn-home:hover{background-color:#a4dadf;}
+
 div.home div{}
 
 div#pilates div{}
