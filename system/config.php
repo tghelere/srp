@@ -25,7 +25,7 @@ if (HOST == "127.0.0.1" || HOST == "localhost" || HOST == "::1") {
 } else if (HOST == "192.168.1.3") {     //seu ip local ex: 192.168.1.3, para isso é preciso editar o httpd.conf
     define('AMBIENTE', 'rede');
     define('ROOTURL', 'http://192.168.1.3/studioraquelpagani2'); //seu ip local ex: 192.168.1.3
-} else {
+} else {	
     define('AMBIENTE', 'producao');
     define('ROOTURL', 'http://www.raquelpagani.com.br/new2');
     define('ROOTPATH', $_SERVER['DOCUMENT_ROOT']."/new2"); //se for o mesmo, tira da condição
@@ -41,7 +41,7 @@ if (AMBIENTE == "local" || AMBIENTE == "rede") {
     define('DBHOST', 'localhost');
     define('DBNAME', 'raquelpa_soft');
     define('DBUSER', 'root');
-    define('DBPWD', 'xixicoco');
+    define('DBPWD', '');
 }
 
 /* Sistema de arquivos */
