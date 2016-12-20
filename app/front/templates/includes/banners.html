@@ -1,6 +1,6 @@
 {nocache}
 <!-- Banners -->
-<div id="banners" class="carousel slide carousel-fade" data-ride="carousel">
+<div id="banners" class="carousel slide" data-ride="carousel">
 	<div class="carousel-inner">
 		{foreach from=$banners item=banner}
 			<div class="item {if ($banners|@count >= 1 && $banner.order == 0)}active{/if}" style="background: url({$img}banners/{$banner.url}) center center no-repeat; background-size:cover; ">

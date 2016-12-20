@@ -1,20 +1,13 @@
-/*=========== RESET ==========*/
-* {margin: 0; padding: 0; font-size: 100%; border: none; outline: none; font-weight: 300; box-sizing: border-box;  font-family: 'Open Sans', sans-serif; }
-body{height:100%; font-family: 'Open Sans', sans-serif !important; }
+/*=========== Global configs ==========*/
+* {padding: 0;}
+body{font-family: 'Open Sans', sans-serif !important;}
 a {text-decoration: none !important;}
-ul {list-style: none;}
-img {max-width: 100%;}
-div{display: block;}
+ul {list-style: none !important;}
 h1, h2, h3, h4, h5{ font-family: 'Shadows Into Light Two' !important;}
 
 
-/*=========== CONTAINER ==========*/
-.container {width: 100%; float: left; text-align: center; min-height:100%; position:relative; display: block; margin: 0 auto;}
-
-
 /*=========== NANOBAR ==========*/
-
-div.nanobar div.bar { background: #31c1cd; border-radius: 3px; box-shadow: 0 0 6px #59d; height:2px; margin: 0 auto;}
+div.nanobar div.bar { background: #31c1cd; border-radius: 3px; box-shadow: 0 0 6px #59d; height:3px; margin: 0 auto;}
 
 /*=========== Cores ==========*/
 .bg-verde{background-color:#31c1cd;}
@@ -23,19 +16,14 @@ div.nanobar div.bar { background: #31c1cd; border-radius: 3px; box-shadow: 0 0 6
 .cl-azulclaro{color:#c0dbd2;}
 .bg-cinza{background-color:#343434;}
 .cl-cinza{color:#343434;}
-.bg-black {background-color: #000; }
 .cl-black {color: #000; }
 .bg-white {background-color: #fff;}
 .cl-white {color: #fff;}
 .bg-cinza-img{background: url(img/bg.png) repeat; }
 
 
-
-
-
 /* Menu */
 div.menu .navbar-right li.active a { background-color: #31c1cd; color:#343434; }
-div.menu div.larg{ margin: 0 auto; width:70%;}
 div.menu a.logo,
   div.menu a.logo h1,
     div.menu a.logo h1 img{width:57px; height:43px; display: block; float: left;}
@@ -51,12 +39,12 @@ div.menu div#navbar-menu:hover, div.menu div#navbar-close:hover{ color:#000;}
 
 /* Banners */
 #banners { overflow: hidden; position: relative;}
-.carousel-fade .carousel-inner .item { opacity: 0; -webkit-transition-property: opacity; transition-property: opacity; background-repeat: no-repeat; background-size: cover; height: 2037px; }
-.carousel-fade .carousel-inner .item:after { content: " "; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.1); }
-.carousel-fade .carousel-inner .active { opacity: 1; }
-.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right { left: 0; opacity: 0; z-index: 1; }
-.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right { opacity: 1; }
-.carousel-fade .carousel-control { z-index: 2; }
+#banners .carousel-inner .item { opacity: 0; -webkit-transition-property: opacity; transition-property: opacity; background-repeat: no-repeat; background-size: cover; height: 2037px; }
+#banners .carousel-inner .item:after { content: " "; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.1); }
+#banners .carousel-inner .active { opacity: 1; }
+#banners .carousel-inner .active.left, #banners .carousel-inner .active.right { left: 0; opacity: 0; z-index: 1; }
+#banners .carousel-inner .next.left, #banners .carousel-inner .prev.right { opacity: 1; }
+#banners .carousel-control { z-index: 2; }
 #banners .left-control, .right-control { position: absolute; top: 50%; height: 51px; width: 51px; line-height: 48px; border-radius: 50%; border:1px solid #fff; z-index: 20; font-size: 24px; color: #fff; text-align: center; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 #banners .left-control { left: -51px; }
 #banners .right-control { right: -51px; }
@@ -76,7 +64,7 @@ div.menu div#navbar-menu:hover, div.menu div#navbar-close:hover{ color:#000;}
 /* Footer */
 
 footer div.footer-top{height:250px; background: #606060 url(img/footer_01.png) no-repeat left top ; width:100%; float: left;}
-footer div.footer-top div.footer-list{max-width:80%; margin: 40px auto 0; }
+footer div.footer-top div.footer-list{margin: 40px auto 0; }
 footer div.footer-top div.footer-list ul{}
 footer div.footer-top div.footer-list ul li{ color: #ffffff; font-size:10px; width:100%;}
 footer div.footer-top div.footer-list ul li.title{ color:#a4dadf; text-transform: uppercase; padding-bottom:8px; font-size:12px; height:30px;}
@@ -98,39 +86,34 @@ footer div.footer-bottom{height:20px; background: #363636; width:100%; float: le
 footer div.footer-bottom p{color:#fff; font-size:10px; padding-top:4px; margin:0 !important;}
 
 
+/*
+div#controller para alterações na pagina toda
+section.controller para alterações no conteudo da pagina
+*/
+div#home{}
+section.home div.pilates{padding:15px;}
+section.home div.ondeestamos{background:url(img/home_localizacao.jpg) no-repeat top right; height:300px; background-size: cover; margin-top:5px; margin-bottom:5px;}
+section.home div.ondeestamos p.title{ margin: 30px 0 0 !important; font-size:16px;}
+section.home div.ondeestamos p{margin-bottom:20px;}
+section.home div.ondeestamos h2{margin:0 0 20px;}
+section.home div.ondeestamos .btn-home{ margin-left:40px;}
+section.home div.ondeestamos .btn-home:hover{background-color:#a4dadf;}
 
 
+div#pilates{}
+section.pilates{}
 
+div#powerplate{}
+section.powerplate{}
 
+div#trx{}
+section.trx{}
 
+div#terapiasmanuais{}
+section.terapiasmanuais{}
 
+div#quemsomos{}
+section.quemsomos{}
 
-
-/* controller + div. para alterações no conteudo da pagina ou div# para alterações na pagina toda */
-div#home div.pilates{max-width:90%; padding:15px;}
-div#home div.ondeestamos{background:url(img/home_localizacao.jpg) no-repeat top center; height:300px; background-size: cover; margin-top:5px; margin-bottom:5px;}
-div#home div.ondeestamos p{ color:#fff; margin-bottom:20px;}
-div#home div.ondeestamos p.title{ color:#31c1cd; margin: 30px 0 0 !important; font-size:16px;}
-div#home div.ondeestamos h2{color:#31c1cd; margin:0 0 20px;}
-div#home div.ondeestamos .btn-home{background-color:#31c1cd; margin-left:40px;}
-div#home div.ondeestamos .btn-home:hover{background-color:#a4dadf;}
-
-div.home div{}
-
-div#pilates div{}
-div.pilates div{}
-
-div#powerplate div{}
-div.powerplate div{}
-
-div#trx div{}
-div.trx div{}
-
-div#terapiasmanuais div{}
-div.terapiasmanuais div{}
-
-div#quemsomos div{}
-div.quemsomos div{}
-
-div#contato div{}
-div.contato div{}
+div#contato{}
+section.contato{}

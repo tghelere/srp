@@ -1,15 +1,19 @@
 $(document).ready(function () {
+
+//nanobar
   var colorbar = new Nanobar({target: document.getElementById('color')});
   colorbar.go(100);
 
+//wow
   new WOW().init();
 
-    $('#ChangeToggle').click(function() {
-     $('#navbar-menu').toggleClass('hidden');
-     $('#navbar-close').toggleClass('hidden');
-   });
+//menu
+  $('#ChangeToggle').click(function() {
+    $('#navbar-menu').toggleClass('hidden');
+    $('#navbar-close').toggleClass('hidden');
+  });
 
-
+//facebook likebox
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -18,7 +22,7 @@ $(document).ready(function () {
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-   //#main-slider
+//banners
    var pag = window.document.activeElement.classList[0];
    if (pag == "index") {
        var slideHeight = $(window).height() - 58; //altura da tela* menos a altura do menu
@@ -29,7 +33,8 @@ $(document).ready(function () {
    $(window).resize(function () {
        'use strict', $('#banners .item').css('height', slideHeight);
    });
-   //Scroll Menu
+
+//Scroll Menu
    $(window).on('scroll', function () {
        if ($(window).scrollTop() > slideHeight) {
            $('.main-nav').addClass('navbar-fixed-top');
