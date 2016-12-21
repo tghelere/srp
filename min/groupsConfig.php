@@ -22,5 +22,6 @@ return array(
         '//app/front/js/bootstrap.min.js',
         '//app/front/js/wow.min.js',
         '//app/front/js/jquery.noty.packaged.min.js',
+        '//app/front/js/jquery.mask.min.js',
         '//app/front/js/main.js')
 );

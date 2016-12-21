@@ -25,7 +25,7 @@ if (HOST == "127.0.0.1" || HOST == "localhost" || HOST == "::1") {
 } else if (HOST == "192.168.1.3") {     //seu ip local ex: 192.168.1.3, para isso é preciso editar o httpd.conf
     define('AMBIENTE', 'rede');
     define('ROOTURL', 'http://192.168.1.3/studioraquelpagani2'); //seu ip local ex: 192.168.1.3
-} else {	
+} else {
     define('AMBIENTE', 'producao');
     define('ROOTURL', 'http://www.raquelpagani.com.br/new2');
     define('ROOTPATH', $_SERVER['DOCUMENT_ROOT']."/new2"); //se for o mesmo, tira da condição
@@ -67,7 +67,7 @@ define('PORTA', 587);
 //define('CC', MAIL_DEV); //com cópia para desenvolvedor
 
 define('EMAIL_CONTATO', 'contato@xxx.com.br');
-define('FONE_CONTATO', '(xx)XXXX-XXXX');
-define('END_CONTATO', 'Rua xxx, Nº XXX - Bairro xxx');
-define('CEP_CONTATO', 'XXXXX-XXX');
-define('LOCAL_CONTATO', 'Xxx - XX');
+define('FONE_CONTATO', '(44) 3225-2411');
+define('END_CONTATO', 'Avenida Nóbrega, Nº 536');
+//define('CEP_CONTATO', 'XXXXX-XXX');
+define('LOCAL_CONTATO', 'Maringá – PR');

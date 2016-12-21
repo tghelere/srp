@@ -1,15 +1,19 @@
 /*=========== Global configs ==========*/
 * {padding: 0;}
 body{font-family: 'Open Sans', sans-serif !important;}
-a {text-decoration: none !important;}
+a{text-decoration: none !important;}
+p{ color:#131212;}
 ul {list-style: none !important;}
 h1, h2, h3, h4, h5{ font-family: 'Shadows Into Light Two' !important;}
+.btn{background-color:#31c1cd; color:#fff;}
+.btn:hover{background-color:#a4dadf; color:#131212; }
+section{padding:5px 0;}
 
 
 /*=========== NANOBAR ==========*/
 div.nanobar div.bar { background: #31c1cd; border-radius: 3px; box-shadow: 0 0 6px #59d; height:3px; margin: 0 auto;}
 
-/*=========== Cores ==========*/
+/*=========== customs ==========*/
 .bg-verde{background-color:#31c1cd;}
 .cl-verde{color:#31c1cd;}
 .bg-azulclaro{background-color:#c0dbd2;}
@@ -19,15 +23,17 @@ div.nanobar div.bar { background: #31c1cd; border-radius: 3px; box-shadow: 0 0 6
 .cl-black {color: #000; }
 .bg-white {background-color: #fff;}
 .cl-white {color: #fff;}
-.bg-cinza-img{background: url(img/bg.png) repeat; }
+.bg-cinza-img{background: url(img/bg.png) repeat;}
+.bg-input{background-color:#D1D1D1;}
+.radius-none{border-radius:0;}
 
 
 /* Menu */
 div.menu .navbar-right li.active a { background-color: #31c1cd; color:#343434; }
-div.menu a.logo,
-  div.menu a.logo h1,
-    div.menu a.logo h1 img{width:57px; height:43px; display: block; float: left;}
-div.menu a.logo h1 { margin: 8px 4px;  padding:0; }
+div.menu a.logo{width:57px; height:43px; display: block; float: left; background:url(img/logo.png) no-repeat center -43px; margin-top:8px;}
+div.menu a.logo:hover{ background-position:0 0;}
+div.menu a.logo h1{display: none;}
+/*div.menu a.logo h1 { margin: 8px 4px;  padding:0; }*/
 div.menu ul{padding:4px 0; margin-right:20px;}
 div.menu .nav li a {color:#fff; font-size: 12px; padding: 15px 13px; text-transform: uppercase;}
 div.menu .nav li a:hover {border: none; color:#31c1cd;  background-color: rgba(0,0,0,.6);}
@@ -92,12 +98,11 @@ section.controller para alterações no conteudo da pagina
 */
 div#home{}
 section.home div.pilates{padding:15px;}
-section.home div.ondeestamos{background:url(img/home_localizacao.jpg) no-repeat top right; height:300px; background-size: cover; margin-top:5px; margin-bottom:5px;}
+section.home div.ondeestamos{background:url(img/home_localizacao.jpg) no-repeat top center; height:300px; background-size: cover; margin-top:5px; margin-bottom:5px;}
 section.home div.ondeestamos p.title{ margin: 30px 0 0 !important; font-size:16px;}
 section.home div.ondeestamos p{margin-bottom:20px;}
 section.home div.ondeestamos h2{margin:0 0 20px;}
 section.home div.ondeestamos .btn-home{ margin-left:40px;}
-section.home div.ondeestamos .btn-home:hover{background-color:#a4dadf;}
 
 
 div#pilates{}
@@ -116,4 +121,71 @@ div#quemsomos{}
 section.quemsomos{}
 
 div#contato{}
-section.contato{}
+section.contato div.img-fachada img{ max-height:260px}
+section.contato div.fone{padding-left: 30px; background:url(img/phone.png) no-repeat top left; background-size:contain; line-height:25px; font-size:20px;}
+section.contato iframe.mapa{width:100%; max-height:300px;}
+
+
+
+  /*==================================================
+  =            Bootstrap 3 Media Queries             =
+  ==================================================*/
+
+
+
+
+      /*==========  Mobile First Method  ==========*/
+
+      /* Custom, iPhone Retina */
+      @media only screen and (min-width : 320px) {
+
+      }
+
+      /* Extra Small Devices, Phones */
+      @media only screen and (min-width : 480px) {
+
+      }
+
+      /* Small Devices, Tablets */
+      @media only screen and (min-width : 768px) {
+
+      }
+
+      /* Medium Devices, Desktops */
+      @media only screen and (min-width : 992px) {
+
+      }
+
+      /* Large Devices, Wide Screens */
+      @media only screen and (min-width : 1200px) {
+
+      }
+
+
+
+      /*==========  Non-Mobile First Method  ==========*/
+
+      /* Large Devices, Wide Screens */
+      @media only screen and (max-width : 1200px) {
+
+      }
+
+      /* Medium Devices, Desktops */
+      @media only screen and (max-width : 992px) {
+
+      }
+
+      /* Small Devices, Tablets */
+      @media only screen and (max-width : 768px) {
+
+      }
+
+      /* Extra Small Devices, Phones */
+      @media only screen and (max-width : 480px) {
+
+      }
+
+      /* Custom, iPhone Retina */
+      @media only screen and (max-width : 320px) {
+
+      }

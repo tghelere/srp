@@ -38,7 +38,7 @@ class Controller extends System {
         $this->smarty->assign("emailContato", EMAIL_CONTATO);
         $this->smarty->assign("foneContato", FONE_CONTATO);
         $this->smarty->assign("endContato", END_CONTATO);
-        $this->smarty->assign("cepContato", CEP_CONTATO);
+        //$this->smarty->assign("cepContato", CEP_CONTATO);
         $this->smarty->assign("localContato", LOCAL_CONTATO);
         //$this->smarty->assign("connection", CONNECTION);
 
