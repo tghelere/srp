@@ -1,22 +1,6 @@
 <?
 
 define('NAME', 'Studio Raquel Pagani');
-define('SLOGAN', '"Desde 2002"');
-define('DESCRIPTION', 'xxx, xxx, xxx');
-define('KEYWORDS', 'xxx, xxx, xxx, xxx');
-
-define('AUTHOR', 'Thyago Ghelere');
-define('MAIL_DEV', 'ghelere@outlook.com');
-define('VERSION', '0.3.0');
-
-
-//verifica se existe conexão com internet
-// if (!$sock = @fsockopen('google.com', 80, $num, $error, 5)) {
-//     define('CONNECTION', FALSE);
-// } else {
-//     define('CONNECTION', TRUE);
-// }
-
 define('HOST', $_SERVER['SERVER_ADDR']);
 
 if (HOST == "127.0.0.1" || HOST == "localhost" || HOST == "::1") {
@@ -35,7 +19,7 @@ if (HOST == "127.0.0.1" || HOST == "localhost" || HOST == "::1") {
     define('DBPWD', 'soft123thing' );
 }
 
-//servidor local
+/* Servidor local */
 if (AMBIENTE == "local" || AMBIENTE == "rede") {
     define('ROOTPATH', $_SERVER['DOCUMENT_ROOT']);
     define('DBHOST', 'localhost');
@@ -53,21 +37,25 @@ define('IMG', ROOTURL . '/app/front/img/');
 define('CSS', ROOTURL . '/app/front/css/');
 define('JS', ROOTURL . '/app/front/js/');
 
+/* Smarty */
 define('SMARTY_CACHE', ROOTPATH . '/cache/');
 define('SMARTY_COMPILE', ROOTPATH . '/compile/');
 define('SMARTY_CACHE_STATUS', true);
 define('SMARTY_CACHE_LIFETIME', 3600);
 
+/* Development */
+define('AUTHOR', 'Thyago Ghelere');
+define('MAIL_DEV', 'ghelere@outlook.com');
+define('VERSION', '0.3.0');
 
 /* E-mail */
 define('SMTP', 'smtp.xxx.com.br');
 define('USER', 'contato@xxx.com.br');
 define('PWD', '');
 define('PORTA', 587);
-//define('CC', MAIL_DEV); //com cópia para desenvolvedor
+define('CC', MAIL_DEV); //com cópia para desenvolvedor
 
 define('EMAIL_CONTATO', 'contato@xxx.com.br');
 define('FONE_CONTATO', '(44) 3225-2411');
 define('END_CONTATO', 'Avenida Nóbrega, Nº 536');
-//define('CEP_CONTATO', 'XXXXX-XXX');
 define('LOCAL_CONTATO', 'Maringá – PR');

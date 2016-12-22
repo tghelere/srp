@@ -8,14 +8,16 @@ class Contato extends Controller {
         if ($this->session->checkSession("contato")) {
             $this->smarty->assign("nome", $this->session->selectSessionValue("contato", "nome"));
             $this->smarty->assign("email", $this->session->selectSessionValue("contato", "email"));
-            $this->smarty->assign("assunto", $this->session->selectSessionValue("contato", "assunto"));
+            $this->smarty->assign("fone", $this->session->selectSessionValue("contato", "fone"));
             $this->smarty->assign("msg", $this->session->selectSessionValue("contato", "msg"));
         }
 
         $banners = new BannersModel();
         $banners_lista = $banners -> listaBanners('contato');
         $this -> smarty -> assign("banners", $banners_lista);
-
+        $this -> smarty -> assign("title", NAME." – Contato ");
+        $this -> smarty -> assign("description", "Fale conosco e tire suas todas as suas dúvidas! Studio Raquel Pagani – Desde 2002 em Maringá");
+        $this -> smarty -> assign("keywords", "Fale conosco, contato, studio Raquel pagani, Pilates");
         $this->session->deleteSession("contato");
         $this->smarty->display("contato.html");
     }
