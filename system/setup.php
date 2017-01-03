@@ -36,6 +36,5 @@ foreach ($scanHelpers as $key => $helper) {
         die("Helper não existe. =>" . HELPERS . $helper);
     }
 }
-
 $start = new System;
 $start->run();

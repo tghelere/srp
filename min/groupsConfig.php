@@ -17,10 +17,9 @@ return array(
         '//app/front/css/bootstrap.min.css',
         '//app/front/css/main.css'),
     'js' => array(
-        '//app/front/js/jquery.js',
+        '//app/front/js/jquery.min.js',
         '//app/front/js/nanobar.min.js',
         '//app/front/js/bootstrap.min.js',
-        '//app/front/js/wow.min.js',
         '//app/front/js/jquery.noty.packaged.min.js',
         '//app/front/js/jquery.mask.min.js',
         '//app/front/js/main.js')

@@ -80,7 +80,9 @@ class System {
         }
         /* 	Smarty	 */
         require_once (ROOTPATH . '/system/libs/smarty/Smarty.class.php');
-        /* 	Smarty	 */
+        /* 	PHP Mailer	 */
+        require_once (ROOTPATH . '/system/libs/phpmailer/PHPMailerAutoload.php');
+
         require_once ($controller_path);
 
         $app = new $this->_controller();

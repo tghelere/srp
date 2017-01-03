@@ -1,7 +1,7 @@
 <?
-
 define('NAME', 'Studio Raquel Pagani');
 define('HOST', $_SERVER['SERVER_ADDR']);
+define('CHARSET', 'UTF-8');
 
 if (HOST == "127.0.0.1" || HOST == "localhost" || HOST == "::1") {
     define('AMBIENTE', 'local');
@@ -49,13 +49,13 @@ define('MAIL_DEV', 'ghelere@outlook.com');
 define('VERSION', '0.3.0');
 
 /* E-mail */
-define('SMTP', 'smtp.xxx.com.br');
-define('USER', 'contato@xxx.com.br');
-define('PWD', '');
+define('SMTP', 'smtp.gmail.com');
+define('USER', 'pagani.ads@gmail.com');
+define('PWD', '32252411');
 define('PORTA', 587);
-define('CC', MAIL_DEV); //com cópia para desenvolvedor
+define('CCO', MAIL_DEV); //com cópia oculta para desenvolvedor
 
-define('EMAIL_CONTATO', 'contato@xxx.com.br');
+define('EMAIL_CONTATO', 'contato@raquelpagani.com.br');
 define('FONE_CONTATO', '(44) 3225-2411');
 define('END_CONTATO', 'Avenida Nóbrega, Nº 536');
 define('LOCAL_CONTATO', 'Maringá – PR');

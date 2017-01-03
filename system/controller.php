@@ -2,17 +2,18 @@
 
 class Controller extends System {
 
-    protected $auth, $redir, $session, $upload, $alerta;
+    protected $redir, $session;
     public $smarty;
 
     public function init() {
-        //print_r($_SESSION);exit;
+
         $this->session = new SessionHelper();
         $this->redir = new RedirectorHelper();
-        $this->auth = new AutenticacaoHelper();
-        //$this->upload = new UploadHelper();
         $this->smarty = new Smarty();
 
+        //print_r($_SESSION);exit;
+
+        // conf smarty
         $this->smarty->cache_dir = SMARTY_CACHE;
         $this->smarty->template_dir = TEMPLATES;
         $this->smarty->compile_dir = SMARTY_COMPILE;
@@ -22,6 +23,7 @@ class Controller extends System {
 
         $this->smarty->assign("ambiente", AMBIENTE);
         $this->smarty->assign("name", NAME);
+        $this->smarty->assign("charSet", CHARSET);
         $this->smarty->assign("author", AUTHOR);
         $this->smarty->assign("version", VERSION);
         $this->smarty->assign("img", IMG);
@@ -53,10 +55,7 @@ class Controller extends System {
             }
         }
         $this->smarty->assign("canonical", $canonical);
-        //Canonical
 
-        //Alertas
-        $this->alerta = new AlertHelper();
 
         //$this->alerta->generateAlert("error", "errrrrrroooouuu");
 
