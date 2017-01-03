@@ -11,7 +11,6 @@ class Controller extends System {
         $this->redir = new RedirectorHelper();
         $this->smarty = new Smarty();
 
-        //print_r($_SESSION);exit;
 
         // conf smarty
         $this->smarty->cache_dir = SMARTY_CACHE;
@@ -55,21 +54,6 @@ class Controller extends System {
             }
         }
         $this->smarty->assign("canonical", $canonical);
-
-
-        //$this->alerta->generateAlert("error", "errrrrrroooouuu");
-
-        //print_r($_SESSION); exit;
-
-
-        /*if ($this->session->checkSession("alert")) {
-            $tipo = $this->session->selectSessionValue("alert", "type");
-            $msg = $this->session->selectSessionValue("alert", "msg");
-
-            echo "<script type=\"text/javascript\">noty({text: '" . $msg . "', type: '" . $tipo . "', theme: 'relax', layout: 'top', timeout: 5000, closeWith: ['click']});</script>";
-        }
-        */
-
 
     }
 

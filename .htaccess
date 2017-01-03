@@ -4,21 +4,21 @@ AddDefaultCharset UTF-8
     RewriteEngine On
 
 ###### descomentar para produção ######
-#    RewriteBase /new2/
-#    RewriteCond %{HTTP_HOST} !^www\.
-#    RewriteRule (.*) http://www.raquelpagani.com.br/new2/$1 [R=301,L]
-#    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteBase /new2/
+    RewriteCond %{HTTP_HOST} !^www\.
+    RewriteRule (.*) http://www.raquelpagani.com.br/new2/$1 [R=301,L]
+    RewriteCond %{REQUEST_FILENAME} !-l
 ###### fim
 
 ###### descomentar para local ######
-    RewriteBase /
+#    RewriteBase /
 ###### fim
 
 
 
     RewriteCond %{REQUEST_URI} !^.*[^/]$
     RewriteCond %{REQUEST_URI} !^.*//.*$
-#    RewriteCond %{REQUEST_METHOD} !POST
+#   RewriteCond %{REQUEST_METHOD} !POST
     RewriteCond %{QUERY_STRING} !.*=.*
     RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
     RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
