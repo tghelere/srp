@@ -117,7 +117,7 @@ section.contato div.fone{padding-left: 30px; background:url(img/phone.png) no-re
 section.contato div.phone{line-height:25px; font-size:20px;}
 section.contato div.phone svg{float:left; width:28px; margin-right:10px;}
 section.contato div.phone p{float:left;}
-section.contato iframe.mapa{width:100%; max-height:300px;}
+section.contato div.mapa iframe{width:100%; max-height:300px; pointer-events: none;}
 
 /*==================================================
 =            Bootstrap 3 Media Queries             =
@@ -162,7 +162,7 @@ p.title{
 	font-family: "Shadows Into Light Two" !important;
 	font-weight: bold;
 	font-size:35px;
-} 
+}
 
 p.title span{
 	font-size: 15px;

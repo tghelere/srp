@@ -70,6 +70,13 @@ $(document).ready(function () {
 
   $('.fone').mask(maskBehavior, options);
 
+// scroll do mapa na pagina contato
+  $('.mapa').click(function () {
+    $('.mapa iframe').css("pointer-events", "auto");
+  });
 
+  $( ".mapa" ).mouseleave(function() {
+    $('.mapa iframe').css("pointer-events", "none");
+  });
 
- });
+});

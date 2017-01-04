@@ -55,7 +55,7 @@ class Contato extends Controller {
                 $mail->setFrom(EMAIL_CONTATO, NAME);
                 $mail->addAddress(EMAIL_CONTATO);
                 $mail->addReplyTo($dados['email'], $dados['nome']);
-                $mail->addBCC(CCO); //copia oculta para programador
+                // $mail->addBCC(CCO); //copia oculta para programador
                 $mail->isHTML(true);
                 $mail->Subject = "Contato - ". NAME;
                 $mail->Body="<div style=\"max-width:600px;\">
@@ -88,7 +88,7 @@ class Contato extends Controller {
             } catch (Exception $exc) {
                 echo $exc->getTraceAsString();
             }
-        }  
+        }
         $this->redir->goToController("contato");
     }
 

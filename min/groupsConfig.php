@@ -12,15 +12,15 @@
  * */
 return array(
     'css' => array(
-        '//new2/app/front/css/font-face.css',
-        '//new2/app/front/css/font-awesome.min.css',
-        '//new2/app/front/css/bootstrap.min.css',
-        '//new2/app/front/css/main.css'),
+        '//app/front/css/font-face.css',
+        '//app/front/css/font-awesome.min.css',
+        '//app/front/css/bootstrap.min.css',
+        '//app/front/css/main.css'),
     'js' => array(
-        '//new2/app/front/js/jquery.min.js',
-        '//new2/app/front/js/nanobar.min.js',
-        '//new2/app/front/js/bootstrap.min.js',
-        '//new2/app/front/js/jquery.noty.packaged.min.js',
-        '//new2/app/front/js/jquery.mask.min.js',
-        '//new2/app/front/js/main.js')
+        '//app/front/js/jquery.min.js',
+        '//app/front/js/nanobar.min.js',
+        '//app/front/js/bootstrap.min.js',
+        '//app/front/js/jquery.noty.packaged.min.js',
+        '//app/front/js/jquery.mask.min.js',
+        '//app/front/js/main.js')
 );
