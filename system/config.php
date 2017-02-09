@@ -25,7 +25,7 @@ if (AMBIENTE == "local" || AMBIENTE == "rede") {
     define('DBHOST', 'localhost');
     define('DBNAME', 'raquelpa_soft');
     define('DBUSER', 'root');
-    define('DBPWD', '');
+    define('DBPWD', 'xixicoco');
 }
 
 /* Sistema de arquivos */

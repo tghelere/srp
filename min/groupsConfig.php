@@ -14,6 +14,7 @@ return array(
     'css' => array(
         '//app/front/css/font-face.css',
         '//app/front/css/font-awesome.min.css',
+        '//app/front/css/jquery.fancybox.css',
         '//app/front/css/bootstrap.min.css',
         '//app/front/css/main.css'),
     'js' => array(
@@ -21,6 +22,7 @@ return array(
         '//app/front/js/nanobar.min.js',
         '//app/front/js/bootstrap.min.js',
         '//app/front/js/jquery.noty.packaged.min.js',
+        '//app/front/js/jquery.fancybox.pack.js',
         '//app/front/js/jquery.mask.min.js',
         '//app/front/js/main.js')
 );
