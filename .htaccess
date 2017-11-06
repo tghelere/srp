@@ -4,9 +4,9 @@ AddDefaultCharset UTF-8
     RewriteEngine On
 
 ###### descomentar para produção ######
-#    RewriteBase /new2/
+#    RewriteBase /
 #    RewriteCond %{HTTP_HOST} !^www\.
-#    RewriteRule (.*) http://www.raquelpagani.com.br/new2/$1 [R=301,L]
+#    RewriteRule (.*) http://www.raquelpagani.com.br/$1 [R=301,L]
 #    RewriteCond %{REQUEST_FILENAME} !-l
 ###### fim
 

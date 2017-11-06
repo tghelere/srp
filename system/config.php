@@ -11,8 +11,8 @@ if (HOST == "127.0.0.1" || HOST == "localhost" || HOST == "::1") {
     define('ROOTURL', 'http://192.168.1.3/studioraquelpagani2'); //seu ip local ex: 192.168.1.3
 } else {
     define('AMBIENTE', 'producao');
-    define('ROOTURL', 'http://www.raquelpagani.com.br/new2');
-    define('ROOTPATH', $_SERVER['DOCUMENT_ROOT']."/new2"); //se for o mesmo, tira da condição
+    define('ROOTURL', 'http://www.raquelpagani.com.br');
+    // define('ROOTPATH', $_SERVER['DOCUMENT_ROOT']."/new2"); //se for o mesmo, tira da condição
     define('DBHOST', 'localhost');
     define('DBNAME', 'raquelpa_soft');
     define('DBUSER', 'raquelpa_dev');
@@ -21,14 +21,20 @@ if (HOST == "127.0.0.1" || HOST == "localhost" || HOST == "::1") {
 
 /* Servidor local */
 if (AMBIENTE == "local" || AMBIENTE == "rede") {
-    define('ROOTPATH', $_SERVER['DOCUMENT_ROOT']);
-    define('DBHOST', 'localhost');
+    define('DBHOST', '177.70.22.208');
     define('DBNAME', 'raquelpa_soft');
-    define('DBUSER', 'root');
-    define('DBPWD', 'xixicoco');
+    define('DBUSER', 'raquelpa_dev');
+    define('DBPWD', 'soft123thing');
 }
+// if (AMBIENTE == "local" || AMBIENTE == "rede") {
+//     define('DBHOST', '172.17.0.2');
+//     define('DBNAME', 'raquelpa_soft');
+//     define('DBUSER', 'root');
+//     define('DBPWD', 'root');
+// }
 
 /* Sistema de arquivos */
+define('ROOTPATH', $_SERVER['DOCUMENT_ROOT']);
 define('CONTROLLERS', ROOTPATH . '/app/back/controllers/');
 define('MODELS', ROOTPATH . '/app/back/models/');
 define('TEMPLATES', ROOTPATH . '/app/front/templates/');

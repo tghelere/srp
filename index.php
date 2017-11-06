@@ -16,5 +16,5 @@
  * @author 	    Thyago Ghelere "ghelere@outlook.com"
  */
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/system/config.php'); // temporario (new2), se for publicação final ou local tira o /new2/
+require_once($_SERVER['DOCUMENT_ROOT'].'/system/config.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/system/setup.php');
