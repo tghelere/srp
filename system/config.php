@@ -3,12 +3,16 @@ define('NAME', 'Studio Raquel Pagani');
 define('HOST', $_SERVER['SERVER_ADDR']);
 define('CHARSET', 'UTF-8');
 
+// Dispositivo
+if ($detect->isMobile()) {
+    define('DEVICE', 'mobile');
+}else{
+    define('DEVICE', 'pc');
+}
+
 if (HOST == "127.0.0.1" || HOST == "localhost" || HOST == "::1") {
     define('AMBIENTE', 'local');
     define('ROOTURL', 'http://studioraquelpagani2.com.br');     //criar o virtual host e editar o arquivo de hosts
-} else if (HOST == "192.168.1.3") {     //seu ip local ex: 192.168.1.3, para isso é preciso editar o httpd.conf
-    define('AMBIENTE', 'rede');
-    define('ROOTURL', 'http://192.168.1.3/studioraquelpagani2'); //seu ip local ex: 192.168.1.3
 } else {
     define('AMBIENTE', 'producao');
     define('ROOTURL', 'http://www.raquelpagani.com.br');
@@ -20,13 +24,13 @@ if (HOST == "127.0.0.1" || HOST == "localhost" || HOST == "::1") {
 }
 
 /* Servidor local */
-if (AMBIENTE == "local" || AMBIENTE == "rede") {
+if (AMBIENTE == "local") {
     define('DBHOST', '177.70.22.208');
     define('DBNAME', 'raquelpa_soft');
     define('DBUSER', 'raquelpa_dev');
     define('DBPWD', 'soft123thing');
 }
-// if (AMBIENTE == "local" || AMBIENTE == "rede") {
+// if (AMBIENTE == "local") {
 //     define('DBHOST', '172.17.0.2');
 //     define('DBNAME', 'raquelpa_soft');
 //     define('DBUSER', 'root');

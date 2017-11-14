@@ -2,3 +2,5 @@
 /compile
 bkp*
 *bkp
+.env
+vendor/

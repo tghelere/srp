@@ -16,5 +16,13 @@
  * @author 	    Thyago Ghelere "ghelere@outlook.com"
  */
 
+require_once($_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php');
+
+require_once($_SERVER['DOCUMENT_ROOT'].'/vendor/mobiledetect/mobiledetectlib/Mobile_Detect.php');
+$detect = new Mobile_Detect;
+
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
+
 require_once($_SERVER['DOCUMENT_ROOT'].'/system/config.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/system/setup.php');
