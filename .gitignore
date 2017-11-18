@@ -1,6 +1,7 @@
-/cache
-/compile
+/cache/*
+/compile/*
 bkp*
 *bkp
 .env
 vendor/
+.env.prod

@@ -1,7 +1,7 @@
 <?
 session_start();
 
-if (AMBIENTE == 'producao') {
+if (ENVIRONMENT == 'production') {
     error_reporting(0);
     ini_set('display_errors', 0);
 } else {

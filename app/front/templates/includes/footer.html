@@ -51,8 +51,10 @@
           </ul>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-          {if $ambiente == "producao"}
+          {if $environment == "production"}
             <div class="fb-page" data-href="https://www.facebook.com/studioraquelpagani/" data-width="290px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/studioraquelpagani/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/studioraquelpagani/">Studio Raquel Pagani</a></blockquote></div>
+          {else}
+            <h2>Facebook Plugin</h2>
           {/if}
         </div>
       </div>

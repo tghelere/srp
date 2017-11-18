@@ -7,3 +7,7 @@ Este é o repositório do website do studio Raquel Pagani que pode ser acessado 
 - Instalar as dependências PHP usando composer, executando ```composer update```
 - Renomear o arquivo **.env.example** para **.env**
 -
+
+
+//criar o virtual host e editar o arquivo de hosts
+//editar htaccess

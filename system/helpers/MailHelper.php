@@ -13,16 +13,16 @@ class MailHelper {
         $this->$mailer->IsSMTP();
         $this->$mailer->SMTPAuth = TRUE;
         $this->$mailer->SMTPSecure = "tls";
-        $this->$mailer->Port = SMTP_PORTA;
+        $this->$mailer->Port = SMTP_PORT;
         $this->$mailer->Host = SMTP_HOST;
         $this->$mailer->Username = SMTP_USER;
         $this->$mailer->Password = SMTP_PWD;
-        $this->$mailer->SetFrom("thyagoghelere@gmail.com", "Eventualizando");
+        $this->$mailer->SetFrom(CONTACT_EMAIL, NAME);
 
-        $this->$mailer->CharSet = "UTF-8";
-        $this->$mailer->AddAddress("ghelere@outlook.com", "Ghelere");
-        $this->$mailer->AddBCC("thyagoghelere@hotmail.com");
-        $this->$mailer->Subject = SLOGAN;
+        $this->$mailer->CharSet = CHARSET;
+        // $this->$mailer->AddAddress("user@mail.com", "Name");
+        // $this->$mailer->AddBCC("user@email.com");
+        $this->$mailer->Subject = "";
         $this->$mailer->MsgHTML($conteudo);
         return $this;
     }

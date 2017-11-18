@@ -44,16 +44,16 @@ class Contato extends Controller {
                 // $mail->SMTPDebug = 1;
                 $mail->Debugoutput = 'html';
                 $mail->isSMTP();
-                $mail->Host = SMTP;
+                $mail->Host = SMTP_HOST;
                 $mail->SMTPAuth = true;
-                $mail->Username = USER;
-                $mail->Password = PWD;
+                $mail->Username = SMTP_USER;
+                $mail->Password = SMTP_PWD;
                 $mail->SMTPSecure = 'tls';
-                $mail->Port = PORTA;
+                $mail->Port = SMTP_PORT;
                 $mail->CharSet = CHARSET;
                 $mail->WordWrap = 70;
-                $mail->setFrom(EMAIL_CONTATO, NAME);
-                $mail->addAddress(EMAIL_CONTATO);
+                $mail->setFrom(CONTACT_EMAIL, NAME);
+                $mail->addAddress(CONTACT_EMAIL);
                 $mail->addReplyTo($dados['email'], $dados['nome']);
                 // $mail->addBCC(CCO); //copia oculta para programador
                 $mail->isHTML(true);

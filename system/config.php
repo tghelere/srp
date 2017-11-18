@@ -1,43 +1,44 @@
 <?
-define('NAME', 'Studio Raquel Pagani');
-define('HOST', $_SERVER['SERVER_ADDR']);
-define('CHARSET', 'UTF-8');
 
-// Dispositivo
+/* Device */
 if ($detect->isMobile()) {
     define('DEVICE', 'mobile');
 }else{
     define('DEVICE', 'pc');
 }
 
-if (HOST == "127.0.0.1" || HOST == "localhost" || HOST == "::1") {
-    define('AMBIENTE', 'local');
-    define('ROOTURL', 'http://studioraquelpagani2.com.br');     //criar o virtual host e editar o arquivo de hosts
-} else {
-    define('AMBIENTE', 'producao');
-    define('ROOTURL', 'http://www.raquelpagani.com.br');
-    // define('ROOTPATH', $_SERVER['DOCUMENT_ROOT']."/new2"); //se for o mesmo, tira da condição
-    define('DBHOST', 'localhost');
-    define('DBNAME', 'raquelpa_soft');
-    define('DBUSER', 'raquelpa_dev');
-    define('DBPWD', 'soft123thing' );
-}
+define('HOST', $_SERVER['SERVER_ADDR']);
+define('CHARSET', 'UTF-8');
+define('NAME', getenv('NAME'));
+define('ENVIRONMENT', getenv('ENVIRONMENT'));
+define('ROOTURL', getenv('ROOTURL'));
 
-/* Servidor local */
-if (AMBIENTE == "local") {
-    define('DBHOST', '177.70.22.208');
-    define('DBNAME', 'raquelpa_soft');
-    define('DBUSER', 'raquelpa_dev');
-    define('DBPWD', 'soft123thing');
-}
-// if (AMBIENTE == "local") {
-//     define('DBHOST', '172.17.0.2');
-//     define('DBNAME', 'raquelpa_soft');
-//     define('DBUSER', 'root');
-//     define('DBPWD', 'root');
-// }
+/* DB */ 
+define('DB_HOST', getenv('DB_HOST'));
+define('DB_NAME', getenv('DB_NAME'));
+define('DB_USER', getenv('DB_USER'));
+define('DB_PWD', getenv('DB_PWD'));
 
-/* Sistema de arquivos */
+/* Development */
+define('AUTHOR', getenv('AUTHOR'));
+define('DEV', getenv('DEV'));
+define('MAIL_DEV', getenv('MAIL_DEV'));
+define('VERSION', getenv('VERSION'));
+
+/* Send mails config */
+define('SMTP_HOST', getenv('SMTP_HOST'));
+define('SMTP_USER', getenv('SMTP_USER'));
+define('SMTP_PWD', getenv('SMTP_PWD'));
+define('SMTP_PORT', getenv('SMTP_PORT'));
+//define('SMTP_CCO', getenv('SMTP_CCO'));
+
+/* Contact */
+define('CONTACT_EMAIL', getenv('EMAIL'));
+define('CONTACT_PHONE', getenv('PHONE'));
+define('CONTACT_ADDRESS', getenv('ADDRESS'));
+define('CONTACT_GEOLOCATION', getenv('GEOLOCATION'));
+
+/* Paths and dirs config */
 define('ROOTPATH', $_SERVER['DOCUMENT_ROOT']);
 define('CONTROLLERS', ROOTPATH . '/app/back/controllers/');
 define('MODELS', ROOTPATH . '/app/back/models/');
@@ -47,25 +48,8 @@ define('IMG', ROOTURL . '/app/front/img/');
 define('CSS', ROOTURL . '/app/front/css/');
 define('JS', ROOTURL . '/app/front/js/');
 
-/* Smarty */
-define('SMARTY_CACHE', ROOTPATH . '/cache/');
-define('SMARTY_COMPILE', ROOTPATH . '/compile/');
+/* Smarty php template */
+define('SMARTY_CACHE', ROOTPATH . '/cache/'); //path to cache dir
+define('SMARTY_COMPILE', ROOTPATH . '/compile/'); //path to compile dir
 define('SMARTY_CACHE_STATUS', true);
 define('SMARTY_CACHE_LIFETIME', 3600);
-
-/* Development */
-define('AUTHOR', 'Thyago Ghelere');
-define('MAIL_DEV', 'ghelere@outlook.com');
-define('VERSION', '0.3.0');
-
-/* E-mail */
-define('SMTP', 'smtp.gmail.com');
-define('USER', 'pagani.ads@gmail.com');
-define('PWD', '32252411');
-define('PORTA', 587);
-define('CCO', MAIL_DEV); //com cópia oculta para desenvolvedor
-
-define('EMAIL_CONTATO', 'contato@raquelpagani.com.br');
-define('FONE_CONTATO', '(44) 3225-2411');
-define('END_CONTATO', 'Avenida Nóbrega, Nº 536');
-define('LOCAL_CONTATO', 'Maringá – PR');
