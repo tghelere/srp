@@ -1,0 +1,23 @@
+{
+  "name": "studioraquelpagani",
+  "description": "Website Studio Raquel Pagani",
+  "main": "index.js",
+  "authors": [
+    "tghelere <ghelere@outlook.com>"
+  ],
+  "license": "ISC",
+  "homepage": "http://www.raquelpagani.com.br",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "breakpoint-sass": "^2.7.1",
+    "sass-flex-mixin": "^1.0.3"
+  }
+}

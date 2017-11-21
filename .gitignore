@@ -5,3 +5,5 @@ bkp*
 .env
 vendor/
 .env.prod
+node_modules
+bower_components

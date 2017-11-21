@@ -9,5 +9,12 @@ Este é o repositório do website do studio Raquel Pagani que pode ser acessado 
 -
 
 
-//criar o virtual host e editar o arquivo de hosts
-//editar htaccess
+criar o virtual host e editar o arquivo de hosts
+editar htaccess
+
+
+criar pasta cache e compile
+sudo chown nobody:nobody cache/
+sudo chown nobody:nobody compile/
+sudo chmod 777 cache/
+sudo chmod 777 compile/
