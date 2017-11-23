@@ -30,14 +30,17 @@ class Controller extends System {
         $this->smarty->assign("js", JS);
         $this->smarty->assign("rootUrl", ROOTURL);
         $this->smarty->assign("thisUrl", ROOTURL . $_SERVER['REQUEST_URI']);
-        $this->smarty->assign("thisController", $this->_controller);
+        if ($this->_controller == 'index') {
+           $this->smarty->assign("thisController", 'home');
+        } else {
+           $this->smarty->assign("thisController", $this->_controller);
+        }              
         $this->smarty->assign("thisAction", $this->_action);
         $this->smarty->assign("thisParams", $this->_params);
         $this->smarty->assign("emailContato", CONTACT_EMAIL);
         $this->smarty->assign("foneContato", CONTACT_PHONE);
         $this->smarty->assign("endContato", CONTACT_ADDRESS);
         $this->smarty->assign("localContato", CONTACT_GEOLOCATION);
-        //$this->smarty->assign("connection", CONNECTION);
 
         //Canonical
         if ($this->_controller == "index") {

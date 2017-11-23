@@ -1,25 +1,40 @@
-{nocache}
-<!-- Banners -->
-<div id="banners" class="carousel slide" data-ride="carousel">
-	<div class="carousel-inner">
-		{foreach from=$banners item=banner}
-			<div class="item {if ($banners|@count >= 1 && $banner.order == 0)}active{/if}" style="background: url({$img}banners/{$banner.url}) center center no-repeat; background-size:auto; ">
-				{if $banner.html != null}
-					{$banner.html}
-				{/if}
+<div id="carousel-example-generic2" class="carousel slide carousel-fullscreen carousel-fade" data-ride="carousel">
+	<div class="carousel-inner" role="listbox">
+		{nocache}
+		{foreach from=$banners item=banner key=k}
+		<div id="{$thisController}" class="item {if $k == 0}active{/if}" style="background-image: url({$img}banners/{$banner.url}); background-size:auto;">
+			<div class="overlay"></div>
+			<div class="carousel-caption">
 				{if $banner.title != null}
-					<div class="caption">
-						<h1 class="animated fadeInLeftBig">{$banner.title}</h1>
-						<p class="animated fadeInRightBig">{$banner.sub}</p>
+				<h1 class="super-heading">{$banner.title}</h1>
+				{/if} {if $banner.sub != null}
+				<p class="super-paragraph">{$banner.sub}</p>
+				{/if}
+				{if $banner.html != null}
+					<div class="{$thisController}">
+						{$banner.html}
 					</div>
 				{/if}
 			</div>
-		{/foreach}
+		</div>
+		{/foreach}		
 	</div>
-	{if ($banners|@count > 1)}
-	<a class="left-control" href="#banners" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-	<a class="right-control" href="#banners" data-slide="next"><i class="fa fa-angle-right"></i></a>
+	{if $banners|@count > 1}
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			{for $i=0 to $banners|@count-1}
+				<li data-target="#carousel-example-generic2" data-slide-to="{$i}" {if $i == 0}class="active"{/if} ></li>
+			{/for}		
+		</ol>		
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
+			<span class="left-control" aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
+			<span class="right-control" aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+			<span class="sr-only">Next</span>
+		</a>
 	{/if}
+	{/nocache}
 </div>
-<!-- Banners -->
-{/nocache}

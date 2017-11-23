@@ -1,0 +1,55 @@
+footer
+    .footer-top
+        height: 270px
+        background: $cinza-footer url(images/footer_01.png) no-repeat left bottom
+        .footer-list
+            +make-row()
+            margin: 40px auto 0
+            #fb
+                +make-md-column(3)
+            .social
+                +make-md-column(1)
+            .areas, .servicos
+                +make-md-column(2)                
+            div
+                ul li                                   
+                    color: $branco
+                    font-size: 11px
+                    
+                    &.title
+                        color: $azul-claro
+                        text-transform: uppercase
+                        font-size: 12px
+                        margin-bottom: 15px
+                    a
+                        color: $branco
+                        line-height: 14px                        
+                        &:hover
+                            color: $verde
+                li.socials ul li
+                    width: 30px
+                    display: inline-block
+                    a
+                        height: 25px
+                        width: 25px
+                        background: url(images/footer_social_icones.png) no-repeat top left
+                        display: block
+                        &.yt
+                            background-position: 0 -25px
+                            &:hover
+                                background-position: 0 0
+                        &.ig
+                            background-position: 0 -75px
+                            &:hover
+                                background-position: 0 -50px
+                        &.fb
+                            background-position: 0 -125px
+                            &:hover
+                                background-position: 0 -100px
+                        span
+                            display: none
+    .footer-bottom
+        line-height: 20px        
+        background: $cinza-active
+        color: $branco
+        font-size: 10px

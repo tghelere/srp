@@ -2,8 +2,8 @@
 <footer id="footer">
   <div class="footer-top">
     <div class="container">
-      <div class="row footer-list text-left">
-        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+      <div class="footer-list">
+        <div class="areas">
           <ul>
             <li class="title">Studio Raquel Pagani</li>
             <li><a href="{$rootUrl}/quemsomos/" title="História">História</a></li>
@@ -12,7 +12,7 @@
             <li><a href="{$rootUrl}/contato/" title="Contato">Contato</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+        <div class="servicos">
           <ul>
             <li class="title">Serviços</li>
             <li><a href="{$rootUrl}/pilates/" title="Pilates Terapêutico">Pilates Terapêutico</a></li>
@@ -23,9 +23,9 @@
             <li><a href="{$rootUrl}/pilates/" title="Pilates para Sedentarismo">Pilates para Sedentarismo</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+        <div class="servicos">
           <ul>
-            <li class="title"></li>
+            <li class="title">&emsp;</li>
             <li><a href="{$rootUrl}/powerplate/" title="Power Plate">Power Plate</a></li>
             <li><a href="{$rootUrl}/trx/" title="TRX - Treino em Suspensão">TRX - Treino em Suspensão</a></li>
             <li><a href="{$rootUrl}/terapias/" title="RPG">RPG</a></li>
@@ -36,7 +36,7 @@
             <li><a href="{$rootUrl}/terapias/" title="Acupuntura">Acupuntura</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+        <div class="social">
           <ul>
             <li class="title">Social</li>
             <li class="socials">
@@ -46,16 +46,17 @@
                   <li><a class="yt" target="_blank" href="https://www.youtube.com/channel/UCZShRAnQbdqsWfVPpdencJQ" title="Youtube"><span>Youtube</span></a></li>
                 </ul>
             </li>
-            {*<li><a target="_blank" href="https://blograquelpagani.wordpress.com/">Blog do Studio</a></li>*}
-            <li><a target="_blank" href="https://www.instagram.com/mercadinhodostudio/">Mercadinho do Studio</a></li>
+            {*<li><a target="_blank" href="https://blograquelpagani.wordpress.com/">Blog do Studio</a></li>
+            <li><a target="_blank" href="https://www.instagram.com/mercadinhodostudio/">Mercadinho do Studio</a></li>*}
           </ul>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-          {if $environment == "production"}
-            <div class="fb-page" data-href="https://www.facebook.com/studioraquelpagani/" data-width="290px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/studioraquelpagani/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/studioraquelpagani/">Studio Raquel Pagani</a></blockquote></div>
-          {else}
-            <h2>Facebook Plugin</h2>
-          {/if}
+        <div id="fb">
+            <div class="fb-page" data-href="https://www.facebook.com/studioraquelpagani/" data-width="309" data-small-header="false"
+              data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/studioraquelpagani/" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/studioraquelpagani/">Studio Raquel Pagani</a>
+              </blockquote>
+            </div>
         </div>
       </div>
     </div>
@@ -66,7 +67,18 @@
     </div>
   </div>
 </footer>
-<script type="text/javascript" src="{$rootUrl}/min/g=js?v=2"></script>
+
+
+
+<script type="text/javascript" src="{$js}jquery.min.js"></script>
+<script type="text/javascript" src="{$js}nanobar.min.js"></script>
+<script type="text/javascript" src="{$js}bootstrap.min.js"></script>
+<script type="text/javascript" src="{$js}jquery.noty.packaged.min.js"></script>
+<script type="text/javascript" src="{$js}jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="{$js}jquery.mask.min.js"></script>
+<script type="text/javascript" src="{$js}main.js"></script>
+
+
 {nocache}<div id="alertas"></div>{/nocache}
 </div>
 </body>

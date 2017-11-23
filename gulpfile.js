@@ -5,7 +5,7 @@ const watch = require('gulp-watch')
 gulp.task('sass', () => {
 	return gulp.src('sass/**/*.sass')
 	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-	.pipe(gulp.dest('app/front/css/new/'))
+	.pipe(gulp.dest('assets/css/'))
 })
 
 gulp.task('watch', () => {

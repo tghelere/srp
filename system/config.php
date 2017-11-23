@@ -44,12 +44,12 @@ define('CONTROLLERS', ROOTPATH . '/app/back/controllers/');
 define('MODELS', ROOTPATH . '/app/back/models/');
 define('TEMPLATES', ROOTPATH . '/app/front/templates/');
 define('HELPERS', ROOTPATH . '/system/helpers/');
-define('IMG', ROOTURL . '/app/front/img/');
-define('CSS', ROOTURL . '/app/front/css/');
-define('JS', ROOTURL . '/app/front/js/');
+define('IMG', ROOTURL . '/assets/img/');
+define('CSS', ROOTURL . '/assets/css/');
+define('JS', ROOTURL . '/assets/js/');
 
 /* Smarty php template */
 define('SMARTY_CACHE', ROOTPATH . '/cache/'); //path to cache dir
 define('SMARTY_COMPILE', ROOTPATH . '/compile/'); //path to compile dir
 define('SMARTY_CACHE_STATUS', true);
-define('SMARTY_CACHE_LIFETIME', 3600);
+ENVIRONMENT == 'local' ? define('SMARTY_CACHE_LIFETIME', 0) : define('SMARTY_CACHE_LIFETIME', 3600);
