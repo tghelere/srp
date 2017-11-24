@@ -24,8 +24,8 @@ $(document).ready(function () {
   // })
 
 //menu
-  $('#ChangeToggle').click(function() {
-    $('#navbar-menu').toggleClass('hidden')
+  $('.menu-open').click(function() {
+    $('.open-menu').toggleClass('hidden')
     $('#navbar-close').toggleClass('hidden')
   })
     
