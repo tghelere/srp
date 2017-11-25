@@ -2,6 +2,7 @@
 <footer id="footer">
   <div class="footer-top">
     <div class="container">
+      {if DEVICE == 'pc'}
       <div class="footer-list">
         <div class="areas">
           <ul>
@@ -59,6 +60,33 @@
             </div>
         </div>
       </div>
+      {else}
+      <div class="footer-mobile">
+        <ul class="links">
+          <li><a href="{$rootUrl}/pilates/" title="Pilates">Pilates</a></li>
+          <li><a href="{$rootUrl}/powerplate/" title="Power Plate">Power Plate</a></li>
+          <li><a href="{$rootUrl}/trx/" title="TRX - Treino em Suspensão">TRX - Treino em Suspensão</a></li>
+          <li><a href="{$rootUrl}/terapias/" title="RPG">RPG</a></li>
+          <li><a href="{$rootUrl}/terapias/" title="Osteopatia">Osteopatia</a></li>
+          <li><a href="{$rootUrl}/terapias/" title="Drenagem Linfática">Drenagem Linfática</a></li>
+          <li><a href="{$rootUrl}/terapias/" title="Massoterapia">Massoterapia</a></li>
+          <li><a href="{$rootUrl}/terapias/" title="Lipo Redux">Lipo Redux</a></li>
+          <li><a href="{$rootUrl}/terapias/" title="Acupuntura">Acupuntura</a></li>
+          <li><a href="{$rootUrl}/quemsomos/" title="Quem somos">Quem somos</a></li>
+        </ul>
+        <div class="contact">
+          <p>Acompanhe-nos pelas redes sociais</p>
+          <div class="socials">
+            <ul>
+              <li><a class="fb" target="_blank" href="https://www.facebook.com/studioraquelpagani/" title="Facebook"><span>Facebook</span></a> </li>
+              <li><a class="ig" target="_blank" href="https://www.instagram.com/studioraquelpagani/" title="Instagram"><span>Instagram</span></a></li>
+              <li><a class="yt" target="_blank" href="https://www.youtube.com/channel/UCZShRAnQbdqsWfVPpdencJQ" title="Youtube"><span>Youtube</span></a></li>
+            </ul>
+          </div>
+          <a href="{$rootUrl}/contato/" title="Contato">Fale conosco</a>
+        </div>
+      </div>
+      {/if}      
     </div>
   </div>
   <div class="footer-bottom">
