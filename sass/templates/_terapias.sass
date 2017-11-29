@@ -1,1 +1,72 @@
-section.terapias
+section.terapias  
+    .first
+        padding: 60px 0
+        
+        h2
+            text-transform: capitalize                
+            margin-bottom: 40px
+        .tabs
+            +clearfix
+            .nav-tabs
+                li.active
+                    a
+                        border-width: 0
+                        border: none
+                        color: $verde !important
+                        background: transparent
+                        &:focus
+                            border-width: 0
+                        &:hover
+                            border-width: 0
+                        &::after
+                            transform: scale(1)
+                li
+                    a
+                        border: none
+                        color: $cinza
+                        &:hover
+                            border: none
+                            color: $verde !important
+                            background: transparent
+                        &::after
+                            content: ""
+                            background: $verde
+                            height: 2px
+                            position: absolute
+                            width: 100%
+                            left: 0px
+                            bottom: -1px
+                            +transition(.3s)
+                            transform: scale(0)
+                    &:hover
+                        a
+                            &::after
+                                transform: scale(1)    
+        .tab-pane        
+            padding: 15px 0
+        .tab-content
+            +make-row
+            padding: 20px
+            h3
+                color: $verde
+                margin-bottom: 25px
+                text-transform: capitalize
+            p
+                margin-bottom: 15px
+                line-height: 20px
+            ul
+                margin: 15px 0
+                +make-md-column(6,1) 
+                li
+                    margin-bottom: 12px
+                    list-style: inside
+            img
+                +img-responsive
+            .left
+                +make-md-column(8,1)
+            .right
+                +make-md-column(4,1)
+                img
+                    +img-responsive
+                    width: 70%
+                    float: right
