@@ -41,9 +41,12 @@
         }(document, 'script', 'facebook-jssdk'));</script>
       <div id="{$thisController}">
         <header>
-          {if $banners}
-            {include file="includes/banners.html"}
+          {if $thisController != "erro"}
+            {if $banners}
+              {include file="includes/banners.html"}
+            {/if}
           {/if}
           {include file="includes/menu.html"}
         </header>
+        
         <section class="{$thisController}">
