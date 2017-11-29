@@ -1,12 +1,15 @@
-.botao
-	border: 2px solid $preto
-	color: $preto
-	text-transform: uppercase
-	font-weight: $bold
-	+transition(.3s)
+.btn
+	border-color: $branco
+	+border-radius(0)
+	color: $branco
+.btn-verde
+	background-color: $verde
 	&:hover
-		border-color: $verde
-		color: $verde
-	&:focus
-		border-color: $azul-claro
-		color: $azul-claro
+		background-color: $azul-claro
+		color: $preto
+.btn-azul
+	background-color: $verde-claro
+	color: $verde
+	&:hover
+		background-color: $cinza
+		color: $branco

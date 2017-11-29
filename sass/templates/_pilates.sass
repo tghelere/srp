@@ -1,2 +1,92 @@
 section.pilates
-	
+    .first
+        padding: 60px 0
+        +clearfix
+        .left
+            +make-md-column(8)
+            h2
+                text-transform: capitalize                
+                margin-bottom: 40px
+            p
+                margin-bottom: 20px                
+                span
+                    line-height: 70px
+                    background-color: $verde-claro
+                    display: inline-block
+                    width: 100%
+                    text-align: center                    
+        .right
+            float: right !important
+            +make-md-column(3)
+            p
+                margin-bottom: 15px                
+            form
+                width: 80%
+                margin-top: 20px
+                background-color: $verde
+                padding: 30px
+                +clearfix
+                input
+                    width: 90%
+                    height: 13px
+                    line-height: 15px
+                    padding: 8px
+                    +border-radius(0)
+                button
+                    float: right
+                    margin-right: 5px
+    .container-fluid
+        padding: 0                 
+        .second 
+            +clearfix       
+            .img-pilates                
+                float: left                
+                width: 25%                
+                +img-responsive
+                img
+                    width: 100%
+    .third
+        padding: 60px 0
+        +make-row
+        .pilates
+            +make-md-column(3.8, 1)
+            height: 292px
+            margin-bottom: 30px
+            margin-right: 20px
+            background-size: cover !important
+            &:hover
+                h3, ul li
+                    color: $verde
+                .overlay
+                    +opacity(.1)
+            .overlay
+                height: 100%
+                width: 100%
+                background-color: $preto
+                +opacity(0)
+                position: absolute
+                top: 0
+                display: block
+            h3
+                margin: 40px 0 30px
+                text-align: center
+            ul
+                width: 90%
+                margin: 0 auto
+                li
+                    margin-bottom: 10px
+                    font-size: 13px
+                    list-style: inside           
+
+        .alivio-de-dores
+            background: url(images/pilates/pilates_dor.png) no-repeat center center
+        .terceira-idade
+            background: url(images/pilates/pilates_tercidade.png) no-repeat center center
+        .adolescentes-e-pre-adolescentes
+            background: url(images/pilates/pilates_adolescentes.png) no-repeat center center
+        .gravidez-e-pos-parto
+            background: url(images/pilates/pilates_gravidez.png) no-repeat center center
+        .atletas
+            background: url(images/pilates/pilates_atletas.png) no-repeat center center
+        .sedentarios
+            background: url(images/pilates/pilates_sedentarios.png) no-repeat center center
