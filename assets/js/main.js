@@ -28,7 +28,12 @@ $(document).ready(function () {
     $('.open-menu').toggleClass('hidden')
     $('#navbar-close').toggleClass('hidden')
   })
-    
+
+
+// modal
+  $('.modal-img').on('click', function () {
+    $('.imagepreview').attr('src', $(this).find('img').attr('src'))
+  })    
 
 //Scroll Menu   
    $(window).on('scroll', () => {
