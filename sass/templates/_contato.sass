@@ -1,2 +1,59 @@
 section.contato
-	
+    .first
+        padding-top: 60px
+        +clearfix
+        h2
+            text-transform: capitalize                
+            margin-bottom: 40px
+        p
+            margin-bottom: 20px                            
+        .left
+            +make-md-column(8,1)
+            form
+                width: 95%
+                input
+                    height: 13px
+                    line-height: 15px
+                    padding: 8px
+                    +border-radius(0)
+                    background-color: $cinza-form
+                    &::placeholder
+                        color: $branco
+                textarea
+                    line-height: 15px
+                    padding: 8px
+                    background-color: $cinza-form
+                    +border-radius(0)
+                    &::placeholder
+                        color: $branco
+                button
+                    float: right
+                    margin-top: 25px
+                               
+        .right            
+            +make-md-column(4,1)
+            img
+                +img-responsive
+        
+    .second
+        margin: 60px 0
+        .text
+            +clearfix
+            h3
+                margin-bottom: 20px
+            ul            
+                width: 100%
+                li
+                    width: 50%
+                    float: left
+                    display: inline
+                    line-height: 28px
+                    svg
+                        width: 28px  
+                        margin-right: 10px
+                        float: left 
+        .map
+            margin-top: 5px
+            iframe
+                width: 100%
+                max-height: 400px

@@ -30,7 +30,7 @@ define('SMTP_HOST', getenv('SMTP_HOST'));
 define('SMTP_USER', getenv('SMTP_USER'));
 define('SMTP_PWD', getenv('SMTP_PWD'));
 define('SMTP_PORT', getenv('SMTP_PORT'));
-//define('SMTP_CCO', getenv('SMTP_CCO'));
+define('SMTP_CCO', getenv('SMTP_CCO'));
 
 /* Contact */
 define('CONTACT_EMAIL', getenv('EMAIL'));

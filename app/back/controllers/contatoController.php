@@ -55,7 +55,9 @@ class Contato extends Controller {
                 $mail->setFrom(CONTACT_EMAIL, NAME);
                 $mail->addAddress(CONTACT_EMAIL);
                 $mail->addReplyTo($dados['email'], $dados['nome']);
-                // $mail->addBCC(CCO); //copia oculta para programador
+                if (ENVIRONMENT == 'local') {
+                    $mail->addBCC(SMTP_CCO); //copia oculta para programador    
+                }                
                 $mail->isHTML(true);
                 $mail->Subject = "Contato - ". NAME;
                 $mail->Body="<div style=\"max-width:600px;\">
