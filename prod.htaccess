@@ -2,13 +2,12 @@ AddDefaultCharset UTF-8
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-
     RewriteBase /
 
 ###### descomentar para produção ######
-#    RewriteCond %{HTTP_HOST} !^www\.
-#    RewriteRule (.*) http://www.raquelpagani.com.br/$1 [R=301,L]
-#    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteCond %{HTTP_HOST} !^www\.
+    RewriteRule (.*) http://www.newversion.raquelpagani.com.br/$1 [R=301,L]
+    RewriteCond %{REQUEST_FILENAME} !-l
 ###### fim
 
 
