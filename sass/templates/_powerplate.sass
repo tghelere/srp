@@ -19,7 +19,9 @@ section.powerplate
         .right
             float: right !important
             +make-md-column(3)
-            padding-top: 55px            
+            padding-top: 55px
+            +breakpoint($celular)
+                display: none    
         .visite
             width: 80%
             margin-top: 20px
@@ -39,16 +41,17 @@ section.powerplate
             +clearfix       
             .img-powerplate
                 float: left                
-                width: 25%                
-                +img-responsive
+                width: 25%                                
                 img
+                    +img-responsive
                     width: 100%
     .third
         padding: 60px 0
-        +make-row
+        +clearfix        
         .left
             +make-md-column(6,1)
-            +img-responsive
+            img
+                +img-responsive
         .right
             +make-md-column(6,0)
             padding-top: 10%
