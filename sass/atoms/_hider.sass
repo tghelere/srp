@@ -1,0 +1,24 @@
+input#show
+	display: none
+	&:checked
+		&~.hider
+			+opacity(1)
+			height: auto
+input#hide
+	display: none
+	&:checked
+		&~.show
+			padding: 10px 0
+			// +gradient(0deg, $azul-claro, transparent)
+			display: block
+			text-align: center
+			&:before
+				content: "continuar lendo"
+				color: $verde
+				text-decoration: underline
+				
+.hider
+	+transition(3s)
+	+opacity(0)
+	height: 0
+	overflow: hidden

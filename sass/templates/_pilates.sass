@@ -3,6 +3,7 @@ section.pilates
         padding: 60px 0
         +clearfix
         .left
+            +clearfix
             +make-md-column(8)
             h2
                 text-transform: capitalize                
@@ -16,12 +17,15 @@ section.pilates
                     width: 100%
                     text-align: center                    
         .right
+            +clearfix
             float: right !important
-            +make-md-column(3)                                   
+            +make-md-column(3)
+            +breakpoint($celular)
+                display: none                              
     .container-fluid
         padding: 0                 
         .second 
-            +clearfix       
+            +clearfix
             .img-pilates                
                 float: left                
                 width: 25%                
@@ -32,11 +36,15 @@ section.pilates
         padding: 60px 0
         +make-row
         .pilates
+            +clearfix
+            width: 90%
             +make-md-column(3.8, 1)
             height: 292px
             margin-bottom: 30px
             margin-right: 20px
             background-size: cover !important
+            +breakpoint($celular)
+                margin: 10px auto
             &:hover
                 h3, ul li
                     color: $verde
