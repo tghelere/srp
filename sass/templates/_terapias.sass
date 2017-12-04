@@ -21,6 +21,9 @@ section.terapias
                         &::after
                             transform: scale(1)
                 li
+                    +breakpoint($celular)
+                        width: 50%
+                        text-align: center
                     a
                         border: none
                         color: $cinza
@@ -70,3 +73,6 @@ section.terapias
                     +img-responsive
                     width: 70%
                     float: right
+                    +breakpoint($celular)
+                        width: 100%
+                        float: none
