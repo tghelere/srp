@@ -4,6 +4,8 @@ section.trx
         +clearfix
         .left
             +make-md-column(8)
+            +breakpoint($celular)
+                padding: 0
             h2
                 text-transform: capitalize                
                 margin-bottom: 40px
@@ -19,7 +21,9 @@ section.trx
         .right
             float: right !important
             +make-md-column(3)
-            padding-top: 55px        
+            padding-top: 55px
+            +breakpoint($celular)
+                display: none  
     .container-fluid
         padding: 0                 
         .second 
@@ -37,6 +41,8 @@ section.trx
         margin-right: 0 !important
         background: url(images/trx_beneficios.png) no-repeat center center
         background-size: cover
+        +breakpoint($celular)
+            background: none        
         +make-row
         .left, .right
             +make-md-column(6,1)
@@ -44,4 +50,6 @@ section.trx
                 text-align: center
                 font-size: 30px
                 color: $amarelo
-                line-height: 60px       
+                line-height: 60px
+                +breakpoint($celular)
+                    color: $preto

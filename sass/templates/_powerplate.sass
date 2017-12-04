@@ -4,6 +4,8 @@ section.powerplate
         +clearfix
         .left
             +make-md-column(8)
+            +breakpoint($celular)
+                padding: 0
             h2
                 text-transform: capitalize                
                 margin-bottom: 40px
@@ -50,6 +52,8 @@ section.powerplate
         +clearfix        
         .left
             +make-md-column(6,1)
+            +breakpoint($celular)
+                display: none  
             img
                 +img-responsive
         .right
