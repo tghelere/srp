@@ -8,6 +8,7 @@ section.contato
         p
             margin-bottom: 20px                            
         .left
+            +clearfix
             +make-md-column(8,1)
             form
                 width: 95%
@@ -34,6 +35,17 @@ section.contato
             +make-md-column(4,1)
             img
                 +img-responsive
+        .mail-fone
+            margin: 50px 0
+            ul
+                margin: 20px
+                li
+                    line-height: 16px
+                    height: 25px
+                    font-weight: $bold
+                    i
+                        margin-right: 10px
+                        width: 15px
         
     .second
         margin: 60px 0
