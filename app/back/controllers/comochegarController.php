@@ -10,7 +10,7 @@ class Comochegar extends Controller {
 
 		$this -> smarty -> assign("title", NAME." – Como Chegar");
 		$this -> smarty -> assign("description", "");
-		$this -> smarty -> assign("keywords", "Como chegar, endereço, logradouro, mapa, onde fica, studio Raquel pagani, Pilates");
+		$this -> smarty -> assign("keywords", "Como chegar, endereço, logradouro, mapa, onde estamos, studio Raquel pagani, Pilates");
 		$this -> smarty -> display("comochegar.html");
 	}
 
