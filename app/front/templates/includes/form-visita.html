@@ -1,15 +1,16 @@
 <div class="form-visita">
-    <form action="">
+    <form action="{$rootUrl}/{$thisController}" method="post">
         <p class="title">Venha conhecer nosso espaço e fazer uma aula experimental de <span>{$thisController}</span>.</p>
         <div class="form-group">
-            <input class="form-control" placeholder="Nome" type="text">
+            <input class="form-control" name="nome" placeholder="Nome" type="text">
         </div>
         <div class="form-group">
-            <input class="form-control" placeholder="E-mail" type="email">
+            <input class="form-control" name="email" placeholder="E-mail" type="email">
         </div>
         <div class="form-group">
-            <input class="form-control" placeholder="Telefone" type="tel">
+            <input class="form-control" name="fone" placeholder="Telefone" type="tel">
         </div>
+        <input type="hidden" name="area" value="{$thisController}">
         <div class="form-group">
             <button class="btn btn-azul">Enviar</button>
         </div>

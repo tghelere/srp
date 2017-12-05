@@ -2,6 +2,13 @@
 class Pilates extends Controller {
 
 	public function Index_action() {
+
+		if ($_POST) {
+			$dados = $_POST;
+			$gendamento = new AgendamentoHelper();
+			$gendamento->enviar($dados);
+		}
+
 		$banners = new BannersModel();
 		$banners_lista = $banners -> listaBanners('pilates');
 
