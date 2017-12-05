@@ -1,0 +1,26 @@
+#accordion
+	.panel-heading
+		padding: 0
+	.panel-title
+		>a
+			display: block
+			padding: 0.4em 0.6em
+			outline: none
+			font-weight: bold
+			text-decoration: none
+		>a.accordion-toggle
+			&::before
+				content: "\f078"
+				float: left
+				margin-right: 1em
+		>a.accordion-toggle.collapsed
+			&::before
+				content: "\f077"
+	a[data-toggle="collapse"]
+		&::before
+			content: "\f078"
+			float: left
+			margin-right: 1em
+	a.collapsed[data-toggle="collapse"]
+		&::before
+			content: "\f077"

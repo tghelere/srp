@@ -2,7 +2,6 @@ section.quemsomos
     .first
         padding: 60px 0
         +clearfix
-        +make-row
         .left
             +make-md-column(6,1)
             h2
@@ -15,10 +14,12 @@ section.quemsomos
                 padding-right: 15px                
         .right
             +make-md-column(6,1)
-            // padding-top: 55px
+            // padding-top: 55px            
             img
                 margin-top: 160px
-                +img-responsive       
+                +img-responsive
+                +breakpoint($celular)
+                    margin: 0
     .container-fluid
         padding: 0                 
         .second 
@@ -31,6 +32,8 @@ section.quemsomos
                     width: 100%
     .third
         margin: 60px 0
+        h3
+            margin-bottom: 30px
         +clearfix
         .left, .right
             +make-md-column(5.9,1)            
@@ -39,7 +42,8 @@ section.quemsomos
                 margin-bottom: 30px
                 .img
                     +make-md-column(2,1)
-                    
+                    +make-xs-column(3,1)
+                    +clearfix                 
                     img
                         +img-responsive
                     ul
@@ -60,8 +64,12 @@ section.quemsomos
                                 background: url(images/insta.png) no-repeat center center
 
                 .description
+                    +clearfix
                     +make-md-column(9,1)
+                    +make-xs-column(8.5,1)
                     padding: 0 20px
+                    +breakpoint($celular)
+                        padding: 0 0 0 10px
                     p
                         font-size: 14px
                         margin-bottom: 12px
@@ -75,7 +83,59 @@ section.quemsomos
         .right
             padding-left: 15px
             border-left: 1px solid $preto
+            +breakpoint($celular)
+                padding: 0
+                border: none
+
+        #accordion
+            .person
+                +clearfix
+                .img                   
+                    +make-xs-column(3,1)
+                    +clearfix                 
+                    img
+                        +img-responsive
+                    ul
+                        li
+                            float: left
+                            width: 24px
+                            height: 24px
+                            margin: 10px 0 0 15px
+                            a
+                                display: inline-block
+                                width: 24px
+                                height: 24px
+                                &:hover
+                                    +opacity(.5)                                    
+                            a.face
+                                background: url(images/face.png) no-repeat center center
+                            a.insta
+                                background: url(images/insta.png) no-repeat center center
+
+                .description
+                    +clearfix
+                    +make-md-column(9,1)
+                    +make-xs-column(8.5,1)
+                    padding: 0 20px
+                    +breakpoint($celular)
+                        padding: 0 0 0 10px
+                    p
+                        font-size: 13px
+                        margin-bottom: 12px
+                        
+                    p.title
+                        font-size: 15px
+                        font-weight: $bold
+                        text-transform: uppercase
+                        margin-bottom: 15px
+                        line-height: 15px 
+
+
+
+
+
+
+
     .forth
         img
             +img-responsive
-        

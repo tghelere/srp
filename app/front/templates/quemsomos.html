@@ -5,12 +5,22 @@
             <h2>Quem Somos</h2>
             <h3>Sobre Raquel Pagani</h3>
             <p>Fisioterapeuta graduada pela Universidade Estadual de Londrina, iniciou seus estudos em busca de conhecimento para trabalhar o corpo de forma global, pensando em seu equilíbrio e harmonia.</p>            
-            <p>Em uma temporada de aprimoramento profissional na França, conheceu e encantou- se com o método RPG (Reeducação Postural Global), criado por Philippe Souchard, e em 1990 fez sua formação com o próprio Philippe! Trabalhou por anos exclusivamente com o método e em 2001 fez sua formação e certificação com Brent Anderson, do Instituto Polestar Pilates, EUA.</p>            
+            {if DEVICE == 'mobile'}
+            <input type="radio" id="show" name="group">
+            <input type="radio" id="hide" name="group" checked>
+            <label for="show" class="show"></label>
+            
+            <div class="hider">
+            {/if}
+            <p>Em uma temporada de aprimoramento profissional na França, conheceu e encantou- se com o método RPG (Reeducação Postural Global), criado por Philippe Souchard, e em 1990 fez sua formação com o próprio Philippe! Trabalhou por anos exclusivamente com o método e em 2001 fez sua formação e certificação com Brent Anderson, do Instituto Polestar Pilates, EUA.</p>
             <p>Desde então, é fã, adepta, instrutora de Pilates e à frente do Studio Raquel Pagani que <strong>desde 2002, é pioneiro em Pilates no norte do Paraná</strong>.</p>            
             <p>Sobre o Studio</p>            
             <p>Iniciou suas atividades na Av. Rio Branco e contou com a fisioterapeuta Raquel Pagani e sua equipe formada por 2 instrutores, que desde o começo iniciaram suas atividades alinhados com o ideal da fundadora.</p>            
             <p>Hoje conta com um total de <strong>9 instrutores</strong> altamente especializados e mantemos o ideal desde o começo que é a exigência de alta qualidade no serviço oferecido no atendimento, e foco no tratamento da dor e atividade terapêutica.</p>            
             <p>Nossa estrutura tem cerca de 450m², ambientada para proporcionar experiência de bem estar e atendimento. Moderna, superequipada e em um local privilegiado, na Av. Nóbrega, 536 - em frente ao Bosque 2. Venha conhecer!</p>
+            {if DEVICE == 'mobile'}
+            </div>
+            {/if}
         </div>
         <div class="right">
             <img src="{$img}{$thisController}/Raquel_quemsomos.jpg" alt="Quem somos">
@@ -18,199 +28,500 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="second">
-        <div class="img-quemsomos">
-            <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
-                <img src="{$img}{$thisController}/quemsomos1.jpg" alt="Quem Somos">
+    {if DEVICE == 'mobile'}
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+            </ol>
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="{$img}{$thisController}/quemsomos1.jpg" alt="Quem Somos">
+                </div>
+                <div class="item">
+                    <img src="{$img}{$thisController}/quemsomos2.jpg" alt="Quem Somos">
+                </div>
+                <div class="item">
+                    <img src="{$img}{$thisController}/quemsomos3.jpg" alt="Quem Somos">
+                </div>
+                <div class="item">
+                    <img src="{$img}{$thisController}/quemsomos4.jpg" alt="Quem Somos">
+                </div>
+                <div class="item">
+                    <img src="{$img}{$thisController}/quemsomos5.jpg" alt="Quem Somos">
+                </div>
+                <div class="item">
+                    <img src="{$img}{$thisController}/quemsomos6.jpg" alt="Quem Somos">
+                </div>
+            </div>
+        
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
+                    <i class="fa fa-angle-left"></i>
+                </span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true">
+                    <i class="fa fa-angle-right"></i>
+                </span>
+                <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="img-quemsomos">
-            <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
-                <img src="{$img}{$thisController}/quemsomos2.jpg" alt="Quem Somos">
-            </a>
+    {else}
+        <div class="second">
+            <div class="img-quemsomos">
+                <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
+                    <img src="{$img}{$thisController}/quemsomos1.jpg" alt="Quem Somos">
+                </a>
+            </div>
+            <div class="img-quemsomos">
+                <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
+                    <img src="{$img}{$thisController}/quemsomos2.jpg" alt="Quem Somos">
+                </a>
+            </div>
+            <div class="img-quemsomos">
+                <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
+                    <img src="{$img}{$thisController}/quemsomos3.jpg" alt="Quem Somos">
+                </a>
+            </div>
+            <div class="img-quemsomos">
+                <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
+                    <img src="{$img}{$thisController}/quemsomos4.jpg" alt="Quem Somos">
+                </a>
+            </div>
+            <div class="img-quemsomos">
+                <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
+                    <img src="{$img}{$thisController}/quemsomos5.jpg" alt="Quem Somos">
+                </a>
+            </div>
+            <div class="img-quemsomos">
+                <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
+                    <img src="{$img}{$thisController}/quemsomos6.jpg" alt="Quem Somos">
+                </a>
+            </div>
         </div>
-        <div class="img-quemsomos">
-            <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
-                <img src="{$img}{$thisController}/quemsomos3.jpg" alt="Quem Somos">
-            </a>
-        </div>
-        <div class="img-quemsomos">
-            <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
-                <img src="{$img}{$thisController}/quemsomos4.jpg" alt="Quem Somos">
-            </a>
-        </div>
-        <div class="img-quemsomos">
-            <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
-                <img src="{$img}{$thisController}/quemsomos5.jpg" alt="Quem Somos">
-            </a>
-        </div>
-        <div class="img-quemsomos">
-            <a href="#" title="Quem Somos" class="modal-img" data-toggle="modal" data-target=".bs-modal-lg">
-                <img src="{$img}{$thisController}/quemsomos6.jpg" alt="Quem Somos">
-            </a>
-        </div>
-    </div>
+    {/if}
 </div>
+
 <div class="container">
     <div class="third">
-        <div class="left">
-            <div class="person">
-                <div class="img">
-                    <img src="{$img}{$thisController}/equipe/equipe_raquel.png" alt="Raquel Pagani de Mayo">
-                    <ul>
-                        <li><a href="https://www.facebook.com/raquel.paganidemayo" target="_blank" class="face"></a></li>
-                        <li><a href="https://www.instagram.com/raquelpaganimayo/" target="_blank" class="insta"></a></li>
-                    </ul>
+        <h3>Equipe</h3>
+        {if DEVICE == 'mobile'}
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <p class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Raquel Pagani de Mayo
+                            </a>
+                        </p>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body person">
+                            <div class="img">
+                                <img src="{$img}{$thisController}/equipe/equipe_raquel.png" alt="Raquel Pagani de Mayo">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/raquel.paganidemayo" target="_blank" class="face"></a></li>
+                                    <li><a href="https://www.instagram.com/raquelpaganimayo/" target="_blank" class="insta"></a></li>
+                                </ul>
+                            </div>
+                            <div class="description">
+                                <p>Fisioterapeuta (UEL - Universidade Estadual de Londrina) 1984</p>
+                                <p>Formação em RPG (Instituto Philippe Souchard) 1990</p>
+                                <p>Formação e Certificação no Método Pilates (PolestarEducation - EUA) 2002</p>
+                                <p>Formação em Power Plate 2008</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="description">
-                    <p class="title">Raquel Pagani de Mayo</p>
-                    <p>Fisioterapeuta (UEL - Universidade Estadual de Londrina) 1984</p>
-                    <p>Formação em RPG (Instituto Philippe Souchard) 1990</p>
-                    <p>Formação e Certificação no Método Pilates (PolestarEducation - EUA) 2002</p>
-                    <p>Formação em Power Plate 2008</p>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <p class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Cinthya Piassi
+                            </a>
+                        </p>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body person">
+                            <div class="img">
+                                <img src="{$img}{$thisController}/equipe/equipe_cinthya.png" alt="Cinthya Piassi">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/cinthya.piassi" target="_blank" class="face"></a></li>
+                                    <li><a href="https://www.instagram.com/cinthyapiassi/" target="_blank" class="insta"></a></li>
+                                </ul>
+                            </div>
+                            <div class="description">
+                                <p>Fisioterapeuta (Cesumar) 2001</p>
+                                <p>Pós-Graduacao em Terapia Manual e Osteopatia (Instituto Docusse) 2004</p>
+                                <p>Pós-Graduacao em Terapia Manual (Instituto Salgado) 2002</p>
+                                <p>Formação no Método Pilates (Núcleo Ângela Beatriz Varella) 2009</p>
+                                <p>Formação em Power Plate 2008</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <p class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Glisiane Sbrana
+                            </a>
+                        </p>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body person">
+                            <div class="img">
+                                <img src="{$img}{$thisController}/equipe/equipe_glisiane.png" alt="Glisiane Sbrana">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/glisiane.sbrana" target="_blank" class="face"></a></li>
+                                </ul>
+                            </div>
+                            <div class="description">
+                                <p>Fisioterapeuta (Cesumar) 2001</p>
+                                <p>Reeducação Postural Global pelo Reequilíbrio Proprioceptivo e Muscular (CBF) 2002</p>
+                                <p>Fisioterapia Aplicada Estética Facial e Corporal (Ibrape) 2002</p>
+                                <p>Fisioterapia Aplicada no pré e pós cirurgia plástica 2002</p>
+                                <p>Terapia Manual e Postural Internacional 2003</p>
+                                <p>Shiatsu (Ibrate) 2004</p>
+                                <p>Fisioterapia Dermato funcional (Ibrate) 2004</p>
+                                <p>Power Plate - São Paulo - SP</p>
+                                <p>Pilates no Solo (Ibrate) 2009</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <p class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Elaine de O. L. Shiguihara
+                            </a>
+                        </p>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="panel-body person">
+                            <div class="img">
+                                <img src="{$img}{$thisController}/equipe/equipe_elaine.png" alt="Elaine de O. L. Shiguihara">
+                                <ul>
+                                    <li><a href="https://www.instagram.com/elaineshiguihara/" target="_blank" class="insta"></a></li>
+                                </ul>
+                            </div>
+                            <div class="description">
+                                <p>Fisioterapeuta (Universidade do Oeste Paulista)</p>
+                                <p>Formação em RPG "Reeducação postural Global "Philippe' Souchard, com especialização em escoliose</p>
+                                <p>Formação completa em Pilates pelo Pilates Institute</p>
+                                <p>Formação em Pilates Suspensos pela VOLL Pilates Group</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                        <p class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Aline Bedin
+                            </a>
+                        </p>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                        <div class="panel-body person">
+                            <div class="img">
+                                <img src="{$img}{$thisController}/equipe/equipe_aline.png" alt="Aline Bedin">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/aline.bedin.902" target="_blank" class="face"></a></li>
+                                    <li><a href="https://www.instagram.com/aobedin" target="_blank" class="insta"></a></li>
+                                </ul>
+                            </div>
+                            <div class="description">
+                                <p>Fisioterapeuta (Cesumar) 2001</p>
+                                <p>Pós-graduação em Terapia Manual e Postural (Instituto Salgado) 2002</p>
+                                <p>Reeducação Postural Global (CBF) 2002</p>
+                                <p>Pós-graduação em Terapia Manual e Osteopatia (Instituto Docusse) 2005</p>
+                                <p>Formação no Método Pilates (Núcleo Angela Beatriz Varella) 2009</p>
+                                <p>Formação em Power Plate 2012</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSix">
+                        <p class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Lilian Carreira Gobetti
+                            </a>
+                        </p>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                        <div class="panel-body person">
+                            <div class="img">
+                                <img src="{$img}{$thisController}/equipe/equipe_lilian.png" alt="Lilian Carreira Gobetti">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/Lilian.Carreira.Gobetti" target="_blank" class="face"></a></li>
+                                    <li><a href="https://www.instagram.com/licarreira/" target="_blank" class="insta"></a></li>
+                                </ul>
+                            </div>
+                            <div class="description">
+                                <p>Fisioterapeuta (FEFIL) 2001</p>
+                                <p>Formação em RPG (Instituto Philippe Souchard) 2003</p>
+                                <p>Especialização em Acupuntura (CEATA) 2003</p>
+                                <p>Pós-Graduação em Terapia Manual (Instituto Salgado) 2005</p>
+                                <p>Formação especial em Patologias Cervicais (Instituto Philippe Souchard) 2006</p>
+                                <p>Pós-Graduação em Terapia Manual e Osteopatia (Instituto Docusse) 2009</p>
+                                <p>Formação em Power Plate 2011</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSeven">
+                        <p class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Marcio Reis dos Santos
+                            </a>
+                        </p>
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                        <div class="panel-body person">
+                            <div class="img">
+                                <img src="{$img}{$thisController}/equipe/equipe_marcio.png" alt="Marcio Reis dos Santos">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/marcio.santos.9887" target="_blank" class="face"></a></li>
+                                    <li><a href="https://www.instagram.com/marcioxc/" target="_blank" class="insta"></a></li>
+                                </ul>
+                            </div>
+                            <div class="description">
+                                <p>Educador Físico (Cesumar) 2003</p>
+                                <p>Pós-Graduação em Personal Training (UEM) 2010</p>
+                                <p>Certificação em Treinador de Ciclismo (Universidade do Esporte de Curitiba) 2004</p>
+                                <p>Formação em Power Plate 2008</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingEight">
+                        <p class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                Paulo Aparecido da Silva
+                            </a>
+                        </p>
+                    </div>
+                    <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                        <div class="panel-body person">
+                            <div class="img">
+                                <img src="{$img}{$thisController}/equipe/equipe_paulo.png" alt="Paulo Aparecido da Silva">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/profile.php?id=100003366324254" target="_blank" class="face"></a></li>
+                                    <li><a href="https://www.instagram.com/pauloedf2000/" target="_blank" class="insta"></a></li>
+                                </ul>
+                            </div>
+                            <div class="description">
+                                <p>Educador Físico (Cesumar) 2003</p>
+                                <p>Formação no Método Pilates (Núcleo Angela Beatriz Varella) 2007</p>
+                                <p>Formação em Power Plate 2009</p>
+                                <p>Formação em TRX Suspension Training 2011</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingNine">
+                        <p class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                Stephan Mazzaro
+                            </a>
+                        </p>
+                    </div>
+                    <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                        <div class="panel-body person">
+                            <div class="img">
+                                <img src="{$img}{$thisController}/equipe/equipe_sthepan.png" alt="Stephan Mazzaro">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/stephan.mazzaro" target="_blank" class="face"></a></li>
+                                    <li><a href="https://www.instagram.com/stephan.mazzaro/" target="_blank" class="insta"></a></li>
+                                </ul>
+                            </div>
+                            <div class="description">
+                                <p>Massoterapeuta - Formação Internacional e Especialista em Terapias Manuais no Japão</p>
+                                <p>Formação Internacional em Seitai, Zenshin, Shiatsu e QuickMassage no Japão</p>
+                                <p>Formação em Reflexologia Podal (pés e mãos) na Tailândia</p>
+                                <p>Formação em curso Técnico em Massoterapia no Instituto Superior de Educação Ágata</p>
+                                <p>Formação em Bases de Quiropraxia pela Faculdade IBRATE • Professor no Instituto Superior de Educação Ágata</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        {else}
+            <div class="left">
+                <div class="person">
+                    <div class="img">
+                        <img src="{$img}{$thisController}/equipe/equipe_raquel.png" alt="Raquel Pagani de Mayo">
+                        <ul>
+                            <li><a href="https://www.facebook.com/raquel.paganidemayo" target="_blank" class="face"></a></li>
+                            <li><a href="https://www.instagram.com/raquelpaganimayo/" target="_blank" class="insta"></a></li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="title">Raquel Pagani de Mayo</p>
+                        <p>Fisioterapeuta (UEL - Universidade Estadual de Londrina) 1984</p>
+                        <p>Formação em RPG (Instituto Philippe Souchard) 1990</p>
+                        <p>Formação e Certificação no Método Pilates (PolestarEducation - EUA) 2002</p>
+                        <p>Formação em Power Plate 2008</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="img">
+                        <img src="{$img}{$thisController}/equipe/equipe_cinthya.png" alt="Cinthya Piassi">
+                        <ul>
+                            <li><a href="https://www.facebook.com/cinthya.piassi" target="_blank" class="face"></a></li>
+                            <li><a href="https://www.instagram.com/cinthyapiassi/" target="_blank" class="insta"></a></li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="title">Cinthya Piassi</p>
+                        <p>Fisioterapeuta (Cesumar) 2001</p>
+                        <p>Pós-Graduacao em Terapia Manual e Osteopatia (Instituto Docusse) 2004</p>
+                        <p>Pós-Graduacao em Terapia Manual (Instituto Salgado) 2002</p>
+                        <p>Formação no Método Pilates (Núcleo Ângela Beatriz Varella) 2009</p>
+                        <p>Formação em Power Plate 2008</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="img">
+                        <img src="{$img}{$thisController}/equipe/equipe_glisiane.png" alt="Glisiane Sbrana">
+                        <ul>
+                            <li><a href="https://www.facebook.com/glisiane.sbrana" target="_blank" class="face"></a></li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="title">Glisiane Sbrana</p>
+                        <p>Fisioterapeuta (Cesumar) 2001</p>
+                        <p>Reeducação Postural Global pelo Reequilíbrio Proprioceptivo e Muscular (CBF) 2002</p>
+                        <p>Fisioterapia Aplicada Estética Facial e Corporal (Ibrape) 2002</p>
+                        <p>Fisioterapia Aplicada no pré e pós cirurgia plástica 2002</p>
+                        <p>Terapia Manual e Postural Internacional 2003</p>
+                        <p>Shiatsu (Ibrate) 2004</p>
+                        <p>Fisioterapia Dermato funcional (Ibrate) 2004</p>
+                        <p>Power Plate - São Paulo - SP</p>
+                        <p>Pilates no Solo (Ibrate) 2009</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="img">
+                        <img src="{$img}{$thisController}/equipe/equipe_elaine.png" alt="Elaine de O. L. Shiguihara">
+                        <ul>
+                            <li><a href="https://www.instagram.com/elaineshiguihara/" target="_blank" class="insta"></a></li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="title">Elaine de O. L. Shiguihara</p>
+                        <p>Fisioterapeuta (Universidade do Oeste Paulista)</p>
+                        <p>Formação em RPG "Reeducação postural Global "Philippe' Souchard, com especialização em escoliose</p>
+                        <p>Formação completa em Pilates pelo Pilates Institute</p>
+                        <p>Formação em Pilates Suspensos pela VOLL Pilates Group</p>
+                    </div>
                 </div>
             </div>
-            <div class="person">
-                <div class="img">
-                    <img src="{$img}{$thisController}/equipe/equipe_cinthya.png" alt="Cinthya Piassi">
-                    <ul>
-                        <li><a href="https://www.facebook.com/cinthya.piassi" target="_blank" class="face"></a></li>
-                        <li><a href="https://www.instagram.com/cinthyapiassi/" target="_blank" class="insta"></a></li>
-                    </ul>
+            <div class="right">
+                <div class="person">
+                    <div class="img">
+                        <img src="{$img}{$thisController}/equipe/equipe_aline.png" alt="Aline Bedin">
+                        <ul>
+                            <li><a href="https://www.facebook.com/aline.bedin.902" target="_blank" class="face"></a></li>
+                            <li><a href="https://www.instagram.com/aobedin" target="_blank" class="insta"></a></li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="title">Aline Bedin</p>
+                        <p>Fisioterapeuta (Cesumar) 2001</p>
+                        <p>Pós-graduação em Terapia Manual e Postural (Instituto Salgado) 2002</p>
+                        <p>Reeducação Postural Global (CBF) 2002</p>
+                        <p>Pós-graduação em Terapia Manual e Osteopatia (Instituto Docusse) 2005</p>
+                        <p>Formação no Método Pilates (Núcleo Angela Beatriz Varella) 2009</p>
+                        <p>Formação em Power Plate 2012</p>
+                    </div>
                 </div>
-                <div class="description">
-                    <p class="title">Cinthya Piassi</p>
-                    <p>Fisioterapeuta (Cesumar) 2001</p>
-                    <p>Pós-Graduacao em Terapia Manual e Osteopatia (Instituto Docusse) 2004</p>
-                    <p>Pós-Graduacao em Terapia Manual (Instituto Salgado) 2002</p>
-                    <p>Formação no Método Pilates (Núcleo Ângela Beatriz Varella) 2009</p>
-                    <p>Formação em Power Plate 2008</p>
+                <div class="person">
+                    <div class="img">
+                        <img src="{$img}{$thisController}/equipe/equipe_lilian.png" alt="Lilian Carreira Gobetti">
+                        <ul>
+                            <li><a href="https://www.facebook.com/Lilian.Carreira.Gobetti" target="_blank" class="face"></a></li>
+                            <li><a href="https://www.instagram.com/licarreira/" target="_blank" class="insta"></a></li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="title">Lilian Carreira Gobetti</p>
+                        <p>Fisioterapeuta (FEFIL) 2001</p>
+                        <p>Formação em RPG (Instituto Philippe Souchard) 2003</p>
+                        <p>Especialização em Acupuntura (CEATA) 2003</p>
+                        <p>Pós-Graduação em Terapia Manual (Instituto Salgado) 2005</p>
+                        <p>Formação especial em Patologias Cervicais (Instituto Philippe Souchard) 2006</p>
+                        <p>Pós-Graduação em Terapia Manual e Osteopatia (Instituto Docusse) 2009</p>
+                        <p>Formação em Power Plate 2011</p>
+                    </div>
                 </div>
-            </div>
-            <div class="person">
-                <div class="img">
-                    <img src="{$img}{$thisController}/equipe/equipe_glisiane.png" alt="Glisiane Sbrana">
-                    <ul>
-                        <li><a href="https://www.facebook.com/glisiane.sbrana" target="_blank" class="face"></a></li>
-                    </ul>
+                <div class="person">
+                    <div class="img">
+                        <img src="{$img}{$thisController}/equipe/equipe_marcio.png" alt="Marcio Reis dos Santos">
+                        <ul>
+                            <li><a href="https://www.facebook.com/marcio.santos.9887" target="_blank" class="face"></a></li>
+                            <li><a href="https://www.instagram.com/marcioxc/" target="_blank" class="insta"></a></li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="title">Marcio Reis dos Santos</p>
+                        <p>Educador Físico (Cesumar) 2003</p>
+                        <p>Pós-Graduação em Personal Training (UEM) 2010</p>
+                        <p>Certificação em Treinador de Ciclismo (Universidade do Esporte de Curitiba) 2004</p>
+                        <p>Formação em Power Plate 2008</p>
+                    </div>
                 </div>
-                <div class="description">
-                    <p class="title">Glisiane Sbrana</p>
-                    <p>Fisioterapeuta (Cesumar) 2001</p>
-                    <p>Reeducação Postural Global pelo Reequilíbrio Proprioceptivo e Muscular (CBF) 2002</p>
-                    <p>Fisioterapia Aplicada Estética Facial e Corporal (Ibrape) 2002</p>
-                    <p>Fisioterapia Aplicada no pré e pós cirurgia plástica 2002</p>
-                    <p>Terapia Manual e Postural Internacional 2003</p>
-                    <p>Shiatsu (Ibrate) 2004</p>
-                    <p>Fisioterapia Dermato funcional (Ibrate) 2004</p>
-                    <p>Power Plate - São Paulo - SP</p>
-                    <p>Pilates no Solo (Ibrate) 2009</p>
+                <div class="person">
+                    <div class="img">
+                        <img src="{$img}{$thisController}/equipe/equipe_paulo.png" alt="Paulo Aparecido da Silva">
+                        <ul>
+                            <li><a href="https://www.facebook.com/profile.php?id=100003366324254" target="_blank" class="face"></a></li>
+                            <li><a href="https://www.instagram.com/pauloedf2000/" target="_blank" class="insta"></a></li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="title">Paulo Aparecido da Silva</p>
+                        <p>Educador Físico (Cesumar) 2003</p>
+                        <p>Formação no Método Pilates (Núcleo Angela Beatriz Varella) 2007</p>
+                        <p>Formação em Power Plate 2009</p>
+                        <p>Formação em TRX Suspension Training 2011</p>
+                    </div>
                 </div>
-            </div>
-            <div class="person">
-                <div class="img">
-                    <img src="{$img}{$thisController}/equipe/equipe_elaine.png" alt="Elaine de O. L. Shiguihara">
-                    <ul>
-                        <li><a href="https://www.instagram.com/elaineshiguihara/" target="_blank" class="insta"></a></li>
-                    </ul>
-                </div>
-                <div class="description">
-                    <p class="title">Elaine de O. L. Shiguihara</p>
-                    <p>Fisioterapeuta (Universidade do Oeste Paulista)</p>
-                    <p>Formação em RPG "Reeducação postural Global "Philippe' Souchard, com especialização em escoliose</p>
-                    <p>Formação completa em Pilates pelo Pilates Institute</p>
-                    <p>Formação em Pilates Suspensos pela VOLL Pilates Group</p>
-                </div>
-            </div>            
-        </div>
-        <div class="right">
-            <div class="person">
-                <div class="img">
-                    <img src="{$img}{$thisController}/equipe/equipe_aline.png" alt="Aline Bedin">
-                    <ul>
-                        <li><a href="https://www.facebook.com/aline.bedin.902" target="_blank" class="face"></a></li>
-                        <li><a href="https://www.instagram.com/aobedin" target="_blank" class="insta"></a></li>
-                    </ul>
-                </div>
-                <div class="description">
-                    <p class="title">Aline Bedin</p>
-                    <p>Fisioterapeuta (Cesumar) 2001</p>
-                    <p>Pós-graduação em Terapia Manual e Postural (Instituto Salgado) 2002</p>
-                    <p>Reeducação Postural Global (CBF) 2002</p>
-                    <p>Pós-graduação em Terapia Manual e Osteopatia (Instituto Docusse) 2005</p>
-                    <p>Formação no Método Pilates (Núcleo Angela Beatriz Varella) 2009</p>
-                    <p>Formação em Power Plate 2012</p>
-                </div>
-            </div>
-            <div class="person">
-                <div class="img">
-                    <img src="{$img}{$thisController}/equipe/equipe_lilian.png" alt="Lilian Carreira Gobetti">
-                    <ul>
-                        <li><a href="https://www.facebook.com/Lilian.Carreira.Gobetti" target="_blank" class="face"></a></li>
-                        <li><a href="https://www.instagram.com/licarreira/" target="_blank" class="insta"></a></li>
-                    </ul>
-                </div>
-                <div class="description">
-                    <p class="title">Lilian Carreira Gobetti</p>
-                    <p>Fisioterapeuta (FEFIL) 2001</p>
-                    <p>Formação em RPG (Instituto Philippe Souchard) 2003</p>
-                    <p>Especialização em Acupuntura (CEATA) 2003</p>
-                    <p>Pós-Graduação em Terapia Manual (Instituto Salgado) 2005</p>
-                    <p>Formação especial em Patologias Cervicais (Instituto Philippe Souchard) 2006</p>
-                    <p>Pós-Graduação em Terapia Manual e Osteopatia (Instituto Docusse) 2009</p>
-                    <p>Formação em Power Plate 2011</p>
+                <div class="person">
+                    <div class="img">
+                        <img src="{$img}{$thisController}/equipe/equipe_sthepan.png" alt="Stephan Mazzaro">
+                        <ul>
+                            <li><a href="https://www.facebook.com/stephan.mazzaro" target="_blank" class="face"></a></li>
+                            <li><a href="https://www.instagram.com/stephan.mazzaro/" target="_blank" class="insta"></a></li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="title">Stephan Mazzaro</p>
+                        <p>Massoterapeuta - Formação Internacional e Especialista em Terapias Manuais no Japão</p>
+                        <p>Formação Internacional em Seitai, Zenshin, Shiatsu e QuickMassage no Japão</p>
+                        <p>Formação em Reflexologia Podal (pés e mãos) na Tailândia</p>
+                        <p>Formação em curso Técnico em Massoterapia no Instituto Superior de Educação Ágata</p>
+                        <p>Formação em Bases de Quiropraxia pela Faculdade IBRATE • Professor no Instituto Superior de Educação Ágata</p>
+                    </div>
                 </div>
             </div>
-            <div class="person">
-                <div class="img">
-                    <img src="{$img}{$thisController}/equipe/equipe_marcio.png" alt="Marcio Reis dos Santos">
-                    <ul>
-                        <li><a href="https://www.facebook.com/marcio.santos.9887" target="_blank" class="face"></a></li>
-                        <li><a href="https://www.instagram.com/marcioxc/" target="_blank" class="insta"></a></li>
-                    </ul>
-                </div>
-                <div class="description">
-                    <p class="title">Marcio Reis dos Santos</p>
-                    <p>Educador Físico (Cesumar) 2003</p>
-                    <p>Pós-Graduação em Personal Training (UEM) 2010</p>
-                    <p>Certificação em Treinador de Ciclismo (Universidade do Esporte de Curitiba) 2004</p>
-                    <p>Formação em Power Plate 2008</p>
-                </div>
-            </div>
-            <div class="person">
-                <div class="img">
-                    <img src="{$img}{$thisController}/equipe/equipe_paulo.png" alt="Paulo Aparecido da Silva">
-                    <ul>
-                        <li><a href="https://www.facebook.com/profile.php?id=100003366324254" target="_blank" class="face"></a></li>
-                        <li><a href="https://www.instagram.com/pauloedf2000/" target="_blank" class="insta"></a></li>
-                    </ul>
-                </div>
-                <div class="description">
-                    <p class="title">Paulo Aparecido da Silva</p>
-                    <p>Educador Físico (Cesumar) 2003</p>
-                    <p>Formação no Método Pilates (Núcleo Angela Beatriz Varella) 2007</p>
-                    <p>Formação em Power Plate 2009</p>
-                    <p>Formação em TRX Suspension Training 2011</p>
-                </div>
-            </div>
-            <div class="person">
-                <div class="img">
-                    <img src="{$img}{$thisController}/equipe/equipe_sthepan.png" alt="Stephan Mazzaro">
-                    <ul>
-                        <li><a href="https://www.facebook.com/stephan.mazzaro" target="_blank" class="face"></a></li>
-                        <li><a href="https://www.instagram.com/stephan.mazzaro/" target="_blank" class="insta"></a></li>
-                    </ul>
-                </div>
-                <div class="description">
-                    <p class="title">Stephan Mazzaro</p>
-                    <p>Massoterapeuta - Formação Internacional e Especialista em Terapias Manuais no Japão</p>
-                    <p>Formação Internacional em Seitai, Zenshin, Shiatsu e QuickMassage no Japão</p>
-                    <p>Formação em Reflexologia Podal (pés e mãos) na Tailândia</p>
-                    <p>Formação em curso Técnico em Massoterapia no Instituto Superior de Educação Ágata</p>
-                    <p>Formação em Bases de Quiropraxia pela Faculdade IBRATE • Professor no Instituto Superior de Educação Ágata</p>
-                </div>
-            </div>
-        </div>
+        {/if}
     </div>
 </div>
 <div class="container-fluid">
