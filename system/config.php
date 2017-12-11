@@ -52,4 +52,5 @@ define('JS', ROOTURL . '/assets/js/');
 define('SMARTY_CACHE', ROOTPATH . '/cache/'); //path to cache dir
 define('SMARTY_COMPILE', ROOTPATH . '/compile/'); //path to compile dir
 define('SMARTY_CACHE_STATUS', true);
-ENVIRONMENT == 'local' ? define('SMARTY_CACHE_LIFETIME', 0) : define('SMARTY_CACHE_LIFETIME', 3600);
+// ENVIRONMENT == 'local' ? define('SMARTY_CACHE_LIFETIME', 0) : define('SMARTY_CACHE_LIFETIME', 3600);
+define('SMARTY_CACHE_LIFETIME', 3600);
