@@ -9,7 +9,13 @@ class Erro extends Controller {
       $this->smarty->assign("description", "Conheça o Studio Raquel Pagani em Maringá.");
       $this->smarty->assign("keywords", "Studio Raquel Pagani, erro 404, 404, error");      
       $this->smarty->assign("thisController", 'erro');
-      $this->smarty->display("erro.html");
+
+      
+      if (DEVICE == "mobile") {
+        $this -> smarty -> display("mobile/erro.html");
+      } else {
+        $this -> smarty -> display("erro.html");
+      }
     }
 
 }

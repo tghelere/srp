@@ -1,38 +1,14 @@
 {include file="includes/header.html"}
-{if DEVICE == 'mobile'}
-  <div class="mobile">
-    <div class="pilates-home">
-      <div class="container">
-        <h2>Pilates</h2>
-        <p class="first-text">Atendimento terapêutico (dor crônica) correção postural e conscientização corporal</p>
-        <p class="second-text">Para todas idades, condicionamentos físicos. 1º em Maringá - desde 2002</p>
-        <p class="second-text cit">"Seu corpo é seu maior bem, ele guarda e reflete sua alma. Cuide dele como se fosse uma pedra preciosa e nós o lapidaremos"</p>
-        <h5 class="text-right">Joseph Pilates</h5>      
-      </div>
-    </div>
-    <div class="onde-estamos">
-      <div class="container">      
-          <p class="title">Centro de</p>
-          <h3>Bem Estar em Movimento</h3>
-          <img src="{$img}home/centro-de-bem-estar-em-movimento.jpg" alt="Onde Estamos">
-          <p>Nossa casa é um centro de Bem Estar!</p>
-          <p>Acreditamos no equilíbrio do corpo junto à natureza, priorizando a necessidade individualizada. Estamos em frente ao Bosque 2, fácil localização e estacionamento. Ar fresco, inspiração e luz natural. Venha conhecer e se surpreender!</p>
-          <p>{$endContato} - {$localContato}</p>
-          <p><a href="https://goo.gl/maps/UE5hw3FgME52" target="_blank" role="button" class="btn btn-verde">Clique aqui para saber como chegar</a></p>
-      </div>
-    </div>
+<div class="container img-pilates">
+  <img src="{$img}{$thisController}/pilates.png" alt="Pilates" />
+</div>
+<div class="container-fluid ondeestamos">
+  <div class="texto">
+    <p class="title">Centro de <br><span>Bem Estar em Movimento</span></p>
+    <p>Nossa casa é um centro de Bem Estar!</p>
+    <p>Acreditamos no equilíbrio do corpo junto à natureza, priorizando a necessidade individualizada. Estamos em frente ao Bosque 2, fácil localização e estacionamento. Ar fresco, inspiração e luz natural. Venha conhecer e se surpreender!</p>
+    <p>{$endContato} - {$localContato}</p>
+    <p><a href="https://goo.gl/maps/UE5hw3FgME52" target="_blank" class="btn btn-verde" role="button">Clique aqui para saber como chegar</a></p>
   </div>
-{else}
-  <div class="container banner-pilates">
-    <img class="img-responsive center" src="{$img}{$thisController}/pilates.png" alt="Pilates" />
-  </div>
-  <div class="container-fluid ondeestamos">
-    <div class="texto">
-      <p class="title">Centro de <br><span>Bem Estar em Movimento</span></p>
-      <p>Nossa casa é um centro de Bem Estar!</p>
-      <p>Acreditamos no equilíbrio do corpo junto à natureza, priorizando a necessidade individualizada. Estamos em frente ao Bosque 2, fácil localização e estacionamento. Ar fresco, inspiração e luz natural. Venha conhecer e se surpreender!</p>
-      <p>{$endContato} - {$localContato} <a href="https://goo.gl/maps/UE5hw3FgME52" target="_blank" class="btn btn-verde" role="button">Clique aqui para saber como chegar</a></p>
-    </div>
-  </div>
-{/if}
+</div>
 {include file="includes/footer.html"}

@@ -1,5 +1,4 @@
 {include file="includes/header.html"}
-   
 <div class="container">
     <div class="first">
         <h2>{$thisController}</h2>
@@ -25,22 +24,11 @@
                 </div>
             </form>
         </div>
-        {if DEVICE == pc}
-            <div class="right">
-                <img src="{$img}{$thisController}/fachada.jpg" alt="{$name}">
-            </div>
-        {else}
-            <div class="mail-fone">
-                Se preferir, entre em contato pelo e-mail ou telefone abaixo:
-                <ul>
-                    <li><i class="fa fa-phone"></i>{$foneContato}</li>
-                    <li><i class="fa fa-envelope-o"></i>{$emailContato}</li>
-                </ul>
-            </div>
-        {/if}
+        <div class="right">
+            <img src="{$img}{$thisController}/fachada.jpg" alt="{$name}">
+        </div>
     </div>
 </div>
-{if DEVICE == pc}
 <div class="container">
     <div class="second">
         <div class="text">
@@ -61,5 +49,4 @@
         </div>
     </div>
 </div>
-{/if}
 {include file="includes/footer.html"}

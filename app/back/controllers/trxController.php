@@ -17,7 +17,12 @@ class Trx extends Controller {
 		$this -> smarty -> assign("title", NAME." – TRX® – Treinamento em Suspensão");
 		$this -> smarty -> assign("description", "Conheça o TRX, exercício funcional de alta performance");
 		$this -> smarty -> assign("keywords", "TRX, Suspension training, treino em suspensão, força, equilíbrio estabilidade, core, peso corporal, rip Training condicionamento físico, exercício, famosos, resistência, treino funcional");
-		$this -> smarty -> display("trx.html");
+
+		if (DEVICE == "mobile") {
+			$this -> smarty -> display("mobile/trx.html");
+		} else {
+			$this -> smarty -> display("trx.html");
+		}
 	}
 
 }

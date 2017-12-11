@@ -19,7 +19,13 @@ class Contato extends Controller {
         $this -> smarty -> assign("description", "Fale conosco e tire suas todas as suas dúvidas! Studio Raquel Pagani – Desde 2002 em Maringá");
         $this -> smarty -> assign("keywords", "Fale conosco, contato, studio Raquel pagani, Pilates");
         $this->session->deleteSession("contato");
-        $this->smarty->display("contato.html");
+
+        
+        if (DEVICE == "mobile") {
+			$this -> smarty -> display("mobile/contato.html");
+		} else {
+			$this -> smarty -> display("contato.html");
+		}
     }
 
     public function enviar() {

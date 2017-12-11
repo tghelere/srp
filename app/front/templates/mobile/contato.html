@@ -1,0 +1,36 @@
+{include file="includes/header.html"}   
+<div class="container">
+    <div class="first">
+        <h2>{$thisController}</h2>
+        <p>Fale conosco!</p>
+        <p>Para entrar em contato conosco, preencha o formulario abaixo com seus dados e sua mensagem. Entraremos em contato assim que possivel.</p>
+        <p>Queremos te ouvir!</p>
+        <div class="left">
+            <form method="post" name="contact-form" action="{$rootUrl}/contato/enviar/" id="contactform">
+                <div class="form-group">
+                    <input type="text" name="nome" class="form-control" placeholder="Nome" minlength="3" required {if isset($nome)}value="{$nome}"{/if}>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="fone" class="form-control phone" maxlength="15" placeholder="Telefone com DDD" required {if isset($fone)}value="{$fone}"{/if}>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="E-mail" required {if isset($email)}value="{$email}"{/if}>
+                </div>
+                <div class="form-group">
+                    <textarea name="msg" class="form-control" rows="12" placeholder="Escreva aqui sua mensagem" required {if isset($msg)}value="{$msg}"{/if}></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-azul">Enviar mensagem</button>
+                </div>
+            </form>
+        </div>
+        <div class="mail-fone">
+            Se preferir, entre em contato pelo e-mail ou telefone abaixo:
+            <ul>
+                <li><i class="fa fa-phone"></i>{$foneContato}</li>
+                <li><i class="fa fa-envelope-o"></i>{$emailContato}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{include file="includes/footer.html"}
