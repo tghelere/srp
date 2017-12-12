@@ -1,7 +1,7 @@
 <?
 
 /* Device */
-if ($detect->isMobile()) {
+if ($detect->isMobile() && !$detect->isTablet()) {
     define('DEVICE', 'mobile');
 }else{
     define('DEVICE', 'pc');

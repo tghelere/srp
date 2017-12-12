@@ -3,7 +3,8 @@ section.trx
         padding: 60px 0
         +clearfix
         .left
-            +make-md-column(8)
+            +clearfix
+            +make-md-column(8, 1)
             +breakpoint($celular)
                 padding: 0
             h2
@@ -20,7 +21,9 @@ section.trx
                     text-align: center                    
         .right
             float: right !important
-            +make-md-column(3)
+            +make-md-column(3, 1)
+            +breakpoint($celular-landscape)
+                width: 100%
             padding-top: 55px
             +breakpoint($celular)
                 display: none  

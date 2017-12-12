@@ -8,6 +8,7 @@ section.terapias
         .tabs
             +clearfix
             .nav-tabs
+                +clearfix
                 li.active
                     a
                         border-width: 0
@@ -26,6 +27,7 @@ section.terapias
                         text-align: center
                     a
                         border: none
+                        font-size: 13px
                         color: $cinza
                         margin-right: 0 !important
                         &:hover
@@ -49,7 +51,7 @@ section.terapias
         .tab-pane        
             padding: 15px 0
         .tab-content
-            +make-row
+            +clearfix
             padding: 20px
             h3
                 color: $verde
@@ -67,13 +69,18 @@ section.terapias
             img
                 +img-responsive
             .left
-                +make-md-column(8,1)
+                width: 70%
+                float: left
+                +breakpoint($celular)
+                    width: 100%
             .right
-                +make-md-column(4,1)
+                width: 28%
+                margin-left: 2% 
+                float: left
+                +breakpoint($celular)
+                    width: 100%
                 img
-                    +img-responsive
-                    width: 70%
-                    float: right
+                    +img-responsive                    
                     +breakpoint($celular)
                         width: 100%
                         float: none

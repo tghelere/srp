@@ -4,6 +4,8 @@ section.quemsomos
         +clearfix
         .left
             +make-md-column(6,1)
+            +breakpoint($tablet)
+                width: 100%
             h2
                 text-transform: capitalize                
                 margin-bottom: 40px
@@ -14,9 +16,13 @@ section.quemsomos
                 padding-right: 15px                
         .right
             +make-md-column(6,1)
+            +breakpoint($tablet)
+                width: auto
             // padding-top: 55px            
             img
                 margin-top: 160px
+                +breakpoint($tablet)
+                    margin-top: 20px
                 +img-responsive
                 +breakpoint($celular)
                     margin: 0
@@ -36,13 +42,18 @@ section.quemsomos
             margin-bottom: 30px
         +clearfix
         .left, .right
-            +make-md-column(5.9,1)            
+            width: 49%
+            +breakpoint($celular-landscape)
+                width: 48%
+            float: left
             .person
                 +clearfix
                 margin-bottom: 30px
                 .img
-                    +make-md-column(2,1)
-                    +make-xs-column(3,1)
+                    width: 30%
+                    +breakpoint($celular-landscape)
+                        width: 28%
+                    float: left
                     +clearfix                 
                     img
                         +img-responsive
@@ -65,8 +76,8 @@ section.quemsomos
 
                 .description
                     +clearfix
-                    +make-md-column(9,1)
-                    +make-xs-column(8.5,1)
+                    width: 60%
+                    float: left
                     padding: 0 20px
                     +breakpoint($celular)
                         padding: 0 0 0 10px
@@ -100,7 +111,7 @@ section.quemsomos
                             float: left
                             width: 24px
                             height: 24px
-                            margin: 10px 0 0 15px
+                            margin: 8%
                             a
                                 display: inline-block
                                 width: 24px

@@ -3,18 +3,35 @@ section.home
         img
             +img-responsive
     .ondeestamos
-        +make-row
         background: url(images/home_localizacao.jpg) no-repeat top center
         background-size: cover
         height: 400px
         margin: 5px 0
+        +breakpoint($tablet)
+            height: 300px
+        +breakpoint($tablet-landscape)
+            height: 320px
         .texto
+            +make-sm-column(6)
+            +make-sm-column-offset(5)
             +make-md-column(5)
             +make-md-column-offset(6)
+            +make-lg-column(5)
+            +make-lg-column-offset(6)
             padding: 50px 0 0
+            +breakpoint($tablet-landscape)
+                padding: 30px 0 0
+            +breakpoint($celular-landscape)
+                padding: 10px 0 0 10px
             p
-                color: $branco
+                color: $branco                
                 margin-bottom: 30px
+                +breakpoint($tablet)
+                    margin-bottom: 15px
+                    font-size: 13px
+                +breakpoint($tablet-landscape)
+                    margin-bottom: 18px
+                    font-size: 14px
             p.title
                 color: $verde
                 line-height: 30px                
@@ -25,12 +42,12 @@ section.home
         .pilates-home
             padding: 20px 0
             background: url(images/pilates-m.png) no-repeat center top
-            background-position-y: 40px
+            background-position-y: 50px
             background-size: 100%
             p.first-text
                 width: 75%
-                font-size: 12px
-                margin: 20px 0 150px
+                // font-size: 13px
+                margin: 20px 0 180px
             p.second-text                
                 width: 100% 
                 text-align: justify

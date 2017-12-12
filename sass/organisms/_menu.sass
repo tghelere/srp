@@ -1,6 +1,4 @@
-.menu
-    +breakpoint($tablet)
-        display: none
+.menu    
     +breakpoint($celular)
         display: none
     background-color: $cinza
@@ -23,6 +21,8 @@
             a
                 color: $branco
                 padding: 15px 13px
+                +breakpoint($tablet)
+                    padding: 15px 10px
                 &:hover
                     color: $verde
                     background-color: rgba($preto, 0.6)

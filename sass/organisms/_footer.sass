@@ -1,18 +1,35 @@
 footer
-    .footer-top        
-        background: $cinza-footer url(images/footer_01.png) no-repeat left bottom
-        +breakpoint($celular)
+    .footer-top
+        +clearfix
+        width: 100%
+        background: $cinza-footer url(images/footer_01.png) no-repeat left bottom        
+        +breakpoint($tablet)
             background-position-x: -40px
         .footer-list
             height: 270px
-            +make-row()
             margin: 40px auto 0
+            display: flex
+            justify-content: space-around
+            align-items: stretch
+            +clearfix
+            .coluna
+                // min-width: 180px
+                // background-color: red
+                margin-left: 1%
             #fb
-                +make-md-column(3)
+                min-width: 250px
+                width: 309px
+                +breakpoint($tablet)
+                    display: none
+
             .social
-                +make-md-column(1)
-            .areas, .servicos
-                +make-md-column(2)                
+                min-width: 102px
+            .servicos
+                min-width: 180px
+            .servicos2
+                min-width: 150px                                
+            .areas
+                min-width: 150px
             div
                 ul li                                   
                     color: $branco
@@ -28,29 +45,37 @@ footer
                         line-height: 14px                        
                         &:hover
                             color: $verde
-        .socials ul li
-            width: 30px
-            display: inline-block
-            a
-                height: 25px
-                width: 25px
-                background: url(images/footer_social_icones.png) no-repeat top left
-                display: block
-                &.yt
-                    background-position: 0 -25px
-                    &:hover
-                        background-position: 0 0
-                &.ig
-                    background-position: 0 -75px
-                    &:hover
-                        background-position: 0 -50px
-                &.fb
-                    background-position: 0 -125px
-                    &:hover
-                        background-position: 0 -100px
-                span
-                    display: none
-    .footer-bottom        
+        .socials
+            +breakpoint($tablet)
+                ul
+                    text-align: center
+                    li
+                        margin: 0 2% 1% 0            
+            ul li
+                width: 30px
+                display: inline-block
+                a
+                    height: 25px
+                    width: 25px
+                    background: url(images/footer_social_icones.png) no-repeat top left
+                    display: block
+                    &.yt
+                        background-position: 0 -25px
+                        &:hover
+                            background-position: 0 0
+                    &.ig
+                        background-position: 0 -75px
+                        &:hover
+                            background-position: 0 -50px
+                    &.fb
+                        background-position: 0 -125px
+                        &:hover
+                            background-position: 0 -100px
+                    span
+                        display: none
+    .footer-bottom
+        +clearfix
+        width: 100%
         line-height: 20px        
         background: $cinza-active
         color: $branco

@@ -9,9 +9,14 @@ section.contato
             margin-bottom: 20px                            
         .left
             +clearfix
-            +make-md-column(8,1)
+            width: 67%
+            +breakpoint($celular-landscape)
+                width: 50%
+            +breakpoint($celular)
+                width: 100%
+            float: left
             form
-                width: 95%
+                width: 95%                
                 input
                     height: 13px
                     line-height: 15px
@@ -28,14 +33,20 @@ section.contato
                     &::placeholder
                         color: $branco
                 button
-                    float: right
+                    float: left
                     margin-top: 25px
                                
-        .right            
-            +make-md-column(4,1)
+        .right
+            width: 33%
+            +breakpoint($celular-landscape)
+                width: 44%
+                margin-left: 4%
+            float: left
             img
+                width: 100%
                 +img-responsive
         .mail-fone
+            float: left
             margin: 50px 0
             ul
                 margin: 20px

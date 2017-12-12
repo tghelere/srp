@@ -10,19 +10,23 @@
 			text-decoration: none
 		>a.accordion-toggle
 			&::before
+				font-family: FontAwesome
 				content: "\f078"
 				float: left
 				margin-right: 1em
 		>a.accordion-toggle.collapsed
 			&::before
+				font-family: FontAwesome
 				content: "\f077"
 	a[data-toggle="collapse"]
 		&::before
+			font-family: FontAwesome
 			content: "\f078"
 			float: left
 			margin-right: 1em
 	a.collapsed[data-toggle="collapse"]
 		&::before
+			font-family: FontAwesome
 			content: "\f077"
 	a[aria-expanded="true"]
 		color: $verde

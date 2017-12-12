@@ -3,7 +3,8 @@ section.powerplate
         padding: 60px 0
         +clearfix
         .left
-            +make-md-column(8)
+            +clearfix
+            +make-md-column(8, 1)
             +breakpoint($celular)
                 padding: 0
             h2
@@ -19,24 +20,29 @@ section.powerplate
                     width: 100%
                     text-align: center                    
         .right
+            +clearfix
             float: right !important
-            +make-md-column(3)
+            +make-md-column(3, 1)
+            +breakpoint($celular-landscape)
+                width: 100%
             padding-top: 55px
             +breakpoint($celular)
                 display: none    
-        .visite
-            width: 80%
-            margin-top: 20px
-            background-color: $verde
-            padding: 30px
-            +clearfix
-            text-align: center
-            p
-                line-height: 30px
-            a
-                line-height: 30px
-                font-weight: $bold
-                color: $branco
+            .visite
+                width: 80%
+                +breakpoint($celular-landscape)
+                    width: auto
+                margin-top: 20px
+                background-color: $verde
+                padding: 30px
+                +clearfix
+                text-align: center
+                p
+                    line-height: 30px
+                a
+                    line-height: 30px
+                    font-weight: $bold
+                    color: $branco
     .container-fluid
         padding: 0                 
         .second 
@@ -51,15 +57,19 @@ section.powerplate
         padding: 60px 0
         +clearfix        
         .left
-            +make-md-column(6,1)
+            +make-md-column(6)
+            +make-sm-column(5, 1)            
             +breakpoint($celular)
                 display: none  
             img
                 +img-responsive
         .right
-            +make-md-column(6,0)
-            padding-top: 10%
+            +make-md-column(6)
+            +make-sm-column(6, 1)
+            padding-top: 8%
+            +breakpoint($tablet)
+                padding-top: 3%
             p
-                margin-bottom: 30px
+                margin-bottom: 6%
         
 	
