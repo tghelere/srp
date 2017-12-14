@@ -5,8 +5,8 @@ AddDefaultCharset UTF-8
     RewriteBase /
 
 ###### descomentar para produção ######
-    RewriteCond %{HTTP_HOST} !^www\.
-    RewriteRule (.*) http://www.newversion.raquelpagani.com.br/$1 [R=301,L]
+#    RewriteCond %{HTTP_HOST} !^www\.
+#    RewriteRule (.*) http://www.newversion.raquelpagani.com.br/$1 [R=301,L]
     RewriteCond %{REQUEST_FILENAME} !-l
 ###### fim
 
@@ -54,7 +54,7 @@ AddDefaultCharset UTF-8
     SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png)$ no-gzip dont-vary
 </IfModule>
 
-<ifmodule mod_expires.c="">
+<ifmodule mod_expires.c>
     ExpiresActive On
     ExpiresByType image/jpg "access 1 year"
     ExpiresByType image/jpeg "access 1 year"
@@ -68,3 +68,9 @@ AddDefaultCharset UTF-8
     ExpiresByType image/x-icon "access 1 year"
     ExpiresDefault "access 1 month"
 </ifmodule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>

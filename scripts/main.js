@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).ready(function(){
 
 //nanobar - barra de carregamento da pagina
       var colorbar = new Nanobar({target: document.getElementById('color')})
@@ -23,7 +23,7 @@ $(document).ready(() => {
       })
 
 //menu mobile
-      $('.menu-open').click( () => {
+      $('.menu-open').click( function() {
         $('.open-menu').toggleClass('hidden')
         $('#navbar-close').toggleClass('hidden')
       })
@@ -34,7 +34,7 @@ $(document).ready(() => {
       })    
 
 //Scroll Menu desktop 
-      $(window).on('scroll', () => {
+      $(window).on('scroll', function() {
           if ($(window).scrollTop() > $('.carousel').height()) {
               $('.main-nav').addClass('navbar-fixed-top')
           } else {
@@ -43,11 +43,11 @@ $(document).ready(() => {
       })
 
 // mascara do form contato
-      var maskBehavior = (val) => {
+      var maskBehavior = function(val) {
         return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
       },
         options = {
-          onKeyPress: (val, e, field, options) => {
+          onKeyPress: function(val, e, field, options){
             field.mask(maskBehavior.apply({}, arguments), options);
           }
         };
