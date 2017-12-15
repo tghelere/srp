@@ -61,8 +61,6 @@ gulp.task('cleanFonts', () => {
 	.pipe(clean())
 })
 
-
-
 gulp.task('mv-fonts', ['cleanFonts'], () => {
 	return gulp.src(fonts[0])
 	.pipe(gulp.dest(fonts[1]))
