@@ -10,14 +10,21 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^4.0.0",
     "gulp-jshint": "^2.0.4",
     "gulp-sass": "^3.1.0",
     "gulp-strip-css-comments": "^1.2.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
+    "imagemin-giflossy": "^5.1.10",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "imagemin-zopfli": "^5.1.0",
     "jshint": "^2.9.5"
   }
 }

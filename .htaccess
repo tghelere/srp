@@ -2,22 +2,11 @@ AddDefaultCharset UTF-8
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-
     RewriteBase /
-
-###### descomentar para produção ######
-#    RewriteCond %{HTTP_HOST} !^www\.
-#    RewriteRule (.*) http://www.raquelpagani.com.br/$1 [R=301,L]
-#    RewriteCond %{REQUEST_FILENAME} !-l
-###### fim
-
-
-
-
-
-#   RewriteCond %{REQUEST_URI} !^.*[^/]$
+    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteCond %{REQUEST_URI} !^.*[^/]$
     RewriteCond %{REQUEST_URI} !^.*//.*$
-#   RewriteCond %{REQUEST_METHOD} !POST
+    RewriteCond %{REQUEST_METHOD} !POST
     RewriteCond %{QUERY_STRING} !.*=.*
     RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
     RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
@@ -55,7 +44,7 @@ AddDefaultCharset UTF-8
     SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png)$ no-gzip dont-vary
 </IfModule>
 
-<ifmodule mod_expires.c="">
+<ifmodule mod_expires.c>
     ExpiresActive On
     ExpiresByType image/jpg "access 1 year"
     ExpiresByType image/jpeg "access 1 year"
@@ -69,3 +58,9 @@ AddDefaultCharset UTF-8
     ExpiresByType image/x-icon "access 1 year"
     ExpiresDefault "access 1 month"
 </ifmodule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
