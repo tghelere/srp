@@ -5,18 +5,18 @@
         <meta http-equiv="Content-Language" content="pt-br" />
         <meta name="language" content="pt-br" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        {if $environment == "production"}
-          {literal}
-            <!-- Google Tag Manager -->
-                <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-KMCXTXJ');</script>
-            <!-- End Google Tag Manager -->
-            <!-- Google Tag Manager (noscript) -->
-                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMCXTXJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->
-          {/literal}
-        {else}
-          <!-- Google Tag Manager -->
-        {/if}
+        {*if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false)}
+          {if $environment == "production"}
+            {literal}
+              <!-- Google Tag Manager -->
+                  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-KMCXTXJ');</script>
+              <!-- End Google Tag Manager -->
+              <!-- Google Tag Manager (noscript) -->
+                  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMCXTXJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+              <!-- End Google Tag Manager (noscript) -->
+            {/literal}          
+          {/if}
+        {/if*}        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {nocache}
           <meta name="description" content="{$description}">
@@ -25,20 +25,15 @@
           <link rel="canonical" href="{$canonical}" />
         {/nocache}
         <meta name="robots" content="all" />
-        <meta name="author" content="{$author}">        
-        <link rel="stylesheet" href="{$css}{$thisController}.css">
+        <meta name="author" content="{$author}">
+        <style>
+        {$cssContent}
+        </style>
+        {*<link rel="stylesheet" href="{$css}{$thisController}.css">*}
         <link rel="shortcut icon" href="{$img}favicon.ico">
         <link rel="apple-touch-icon" href="{$img}apple-touch-icon.png">
     </head>
-    <body class="{$thisController}">
-      <div id="fb-root"></div>
-      <script>(function (d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.11&appId=936028466417582';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+    <body class="{$thisController}">            
       <div id="{$thisController}">
         <header>
           {include file="includes/modal.html"}

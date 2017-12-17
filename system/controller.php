@@ -2,8 +2,8 @@
 
 class Controller extends System {
 
-    protected $redir, $session;
-    public $smarty;
+    protected $redir, $session, $css;
+    public $smarty;    
 
     public function init() {
 
@@ -31,10 +31,13 @@ class Controller extends System {
         $this->smarty->assign("rootUrl", ROOTURL);
         $this->smarty->assign("thisUrl", ROOTURL . $_SERVER['REQUEST_URI']);
         if ($this->_controller == 'index') {
-           $this->smarty->assign("thisController", 'home');
+            $this->css = file(ROOTPATH."/assets/css/home.css");
+            $this->smarty->assign("thisController", 'home');
         } else {
-           $this->smarty->assign("thisController", $this->_controller);
-        }              
+            $this->css = file(ROOTPATH."/assets/css/" . $this->_controller . ".css");
+            $this->smarty->assign("thisController", $this->_controller);
+        }        
+		$this->smarty->assign("cssContent", $this->css[0]);
         $this->smarty->assign("thisAction", $this->_action);
         $this->smarty->assign("thisParams", $this->_params);
         $this->smarty->assign("emailContato", CONTACT_EMAIL);

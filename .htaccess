@@ -6,9 +6,7 @@ AddDefaultCharset UTF-8
     RewriteCond %{REQUEST_FILENAME} !-l
     RewriteCond %{REQUEST_URI} !^.*[^/]$
     RewriteCond %{REQUEST_URI} !^.*//.*$
-#    RewriteCond %{REQUEST_METHOD} !POST
     RewriteCond %{QUERY_STRING} !.*=.*
-#    RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
     RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
     RewriteCond %{HTTP:Accept-Encoding} gzip
     RewriteCond %{HTTPS} !on
