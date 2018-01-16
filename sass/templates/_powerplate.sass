@@ -10,15 +10,14 @@ section.powerplate
             h2
                 text-transform: capitalize                
                 margin-bottom: 40px
-            p
-                margin-bottom: 20px                
-                span
-                    padding: 30px 0
-                    line-height: 20px
-                    background-color: $verde-claro
-                    display: inline-block
-                    width: 100%
-                    text-align: center                    
+            .destaque                
+                line-height: 20px
+                background-color: $verde-claro
+                text-align: center
+            ul
+                text-align: center
+                li
+                    padding: 5px 0
         .right
             +clearfix
             float: right !important
@@ -36,9 +35,7 @@ section.powerplate
                 background-color: $verde
                 padding: 30px
                 +clearfix
-                text-align: center
-                p
-                    line-height: 30px
+                text-align: center                
                 a
                     line-height: 30px
                     font-weight: $bold
@@ -69,8 +66,6 @@ section.powerplate
             +make-sm-column(6, 1)
             padding-top: 8%
             +breakpoint($tablet)
-                padding-top: 3%
-            p
-                margin-bottom: 6%
+                padding-top: 3%            
         
 	

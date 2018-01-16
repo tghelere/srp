@@ -38,28 +38,33 @@
 .menu-mobile     
     .list
         width: 100%
-        height: 40px
+        height: auto
         background-color: $cinza
         position: fixed
         bottom: 0
         z-index: 4
         ul
             li
-                text-align: center
-                display: inline-block
+                text-align: center                
                 font-size: 11px
-                line-height: 40px
-                &.home, &.menu-open
-                    width: 20%
-                &.contato
-                    width: 25%
-                &.comochegar
-                    width: 30%
+                padding: 10px 0
+                display: inline-block
+                //line-height: 40px
+                &.home, &.menu-open, &.contato, &.comochegar
+                    width: 24%
                 a
-                    display: block
+                    display: inline-block
+                    width: 100%
+                    height: 100%
                     color: $branco
-                    i
-                        padding-right: 4px
+                    span
+                        width: 100%
+                        float: left
+                        text-align: center
+                        line-height: 18px
+                    i                        
+                        font-size: 22px
+                        text-align: center
     .open-menu                     
         height: 100%
         width: 100%
@@ -101,93 +106,93 @@
                     
                     &.pi                        
                         a                   
-                            background: url(/assets/css/images/pilates.png) no-repeat center center
-                            background-size: 90%
+                            background: url(/assets/css/images/pilates-c.png) no-repeat center center
+                            background-size: 70%
                         &::after
                             content: ""
                             position: absolute
                             top: 12%
                             right: 0
                             height: 70%
-                            width: 1px
-                            background-color: $bordas-menu
+                            width: 0.5px
+                            background-color: $azul-claro
                         &::before
                             content: ""
                             position: absolute
                             bottom: 0
                             left: 30%
-                            height: 1px
+                            height: 0.5px
                             width: 55%
-                            background-color: $bordas-menu
+                            background-color: $azul-claro
                     &.po 
                         a
-                            background: url(/assets/css/images/powerplate.png) no-repeat center center
-                            background-size: 60%                        
+                            background: url(/assets/css/images/powerplate-c.png) no-repeat center center
+                            background-size: 70%                        
                         &::after
                             content: ""
                             position: absolute
                             top: 12%
                             left: 0
                             height: 70%
-                            width: 1px
-                            background-color: $bordas-menu
+                            width: 0.5px
+                            background-color: $azul-claro
                         &::before
                             content: ""
                             position: absolute
                             bottom: 0
                             right: 30%
-                            height: 1px
+                            height: 0.5px
                             width: 55%
-                            background-color: $bordas-menu
+                            background-color: $azul-claro
                     &.tr
                         a
-                            background: url(/assets/css/images/trx.png) no-repeat center center
-                            background-size: 100%
+                            background: url(/assets/css/images/trx-c.png) no-repeat center center
+                            background-size: 70%
                         &::before
                             content: ""
                             position: absolute
                             top: 0
                             left: 30%
-                            height: 1px
+                            height: 0.5px
                             width: 55%
                             margin: 0 auto
-                            background-color: $bordas-menu
+                            background-color: $azul-claro
                         &::after
                             content: ""
                             position: absolute
                             top: 16%
                             right: 0
                             height: 60%
-                            width: 1px
-                            background-color: $bordas-menu
+                            width: 0.5px
+                            background-color: $azul-claro
                     &.te
                         a
-                            background: url(/assets/css/images/terapias.png) no-repeat center center
-                            background-size: 80%
+                            background: url(/assets/css/images/terapias-c.png) no-repeat center center
+                            background-size: 70%
                         &::after
                             content: ""
                             position: absolute
                             top: 16%
                             left: 0
                             height: 60%
-                            width: 1px
-                            background-color: $bordas-menu
+                            width: 0.5px
+                            background-color: $azul-claro
                         &::before
                             content: ""
                             position: absolute
                             top: 0
                             right: 30%
-                            height: 1px
+                            height: 0.5px
                             width: 55%
-                            background-color: $bordas-menu
+                            background-color: $azul-claro
                     &.pi, &.po
                         height: 22%
                         a span
-                            bottom: 15px
+                            bottom: 20%
                     &.tr, &.te
                         height: 27%
                         a span
-                            bottom: 28px
+                            bottom: 20%
                     &.qu
                         height: 15%
                         &::after
@@ -196,16 +201,16 @@
                             top: 15%
                             right: 0
                             height: 80%
-                            width: 1px
-                            background-color: $bordas-menu
+                            width: 0.5px
+                            background-color: $azul-claro
                         &::before
                             content: ""
                             position: absolute
                             top: 0
                             right: 0
-                            height: 1px
+                            height: 0.5px
                             width: 90%
-                            background-color: $bordas-menu-baixo
+                            background-color: $azul-claro
                         a span
                             top: 50%
                     &.co
@@ -216,16 +221,16 @@
                             top: 15%
                             left: 0
                             height: 80%
-                            width: 1px
-                            background-color: $bordas-menu
+                            width: 0.5px
+                            background-color: $azul-claro
                         &::before
                             content: ""
                             position: absolute
                             top: 0
                             left: 0
-                            height: 1px
+                            height: 0.5px
                             width: 90%
-                            background-color: $bordas-menu-baixo
+                            background-color: $azul-claro
                         a span
                             top: 50%
                     a                        

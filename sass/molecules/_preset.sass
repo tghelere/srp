@@ -11,6 +11,8 @@ body
   background: #f3f1ed url(/assets/css/images/bg_texture.jpg) repeat
   font-weight: $regular
   line-height: 1
+  +breakpoint($celular)
+    margin-bottom: 20px
 
 strong
   font-weight: $bold
@@ -54,5 +56,10 @@ table
   z-index: 3 !important
   li
       background-color: $verde
+      border: none
       &.active
           background-color: $branco
+
+p
+  line-height: 1.3em
+  padding: 10px 0

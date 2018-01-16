@@ -4,34 +4,24 @@ section.home
             +img-responsive
     .ondeestamos
         background: url(/assets/css/images/home_localizacao.jpg) no-repeat top center
+        +breakpoint($tablet)
+            background-position-x: right
         background-size: cover
         height: 400px
-        margin: 5px 0
-        +breakpoint($tablet)
-            height: 300px
+        margin: 5px 0        
         +breakpoint($tablet-landscape)
             height: 320px
         .texto
-            +make-sm-column(6)
-            +make-sm-column-offset(5)
+            display: flex
+            flex-direction: column
+            // align-items: center
+            justify-content: center
+            height: 320px            
             +make-md-column(5)
-            +make-md-column-offset(6)
-            +make-lg-column(5)
-            +make-lg-column-offset(6)
-            padding: 50px 0 0
-            +breakpoint($tablet-landscape)
-                padding: 30px 0 0
-            +breakpoint($celular-landscape)
-                padding: 10px 0 0 10px
+            +make-md-column-offset(6)            
             p
-                color: $branco                
-                margin-bottom: 30px
-                +breakpoint($tablet)
-                    margin-bottom: 15px
-                    font-size: 13px
-                +breakpoint($tablet-landscape)
-                    margin-bottom: 18px
-                    font-size: 14px
+                color: $branco
+                font-size: 13px               
             p.title
                 color: $verde
                 line-height: 30px                
@@ -40,14 +30,14 @@ section.home
                     font-size: 35px
     .mobile
         .pilates-home
-            padding: 20px 0
-            background: url(/assets/css/images/pilates-m.png) no-repeat center top
-            background-position-y: 50px
-            background-size: 100%
+            padding: 60px 0
+            h2
+                text-transform: capitalize                
+                margin-bottom: 40px
+            img
+                +img-responsive
             p.first-text
-                width: 75%
-                // font-size: 13px
-                margin: 20px 0 180px
+                width: 100%                
             p.second-text                
                 width: 100% 
                 text-align: justify
@@ -70,4 +60,3 @@ section.home
                 color: $branco
                 font-size: 14px
                 text-align: center
-                margin: 15px 0

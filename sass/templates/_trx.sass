@@ -10,15 +10,59 @@ section.trx
             h2
                 text-transform: capitalize                
                 margin-bottom: 40px
-            p
-                margin-bottom: 20px                
-                span
-                    padding: 30px 0
-                    line-height: 20px
-                    background-color: $verde-claro
-                    display: inline-block
-                    width: 100%
-                    text-align: center                    
+            .tabs
+                +clearfix
+                .nav-tabs
+                    +clearfix
+                    li.active
+                        a
+                            border-width: 0
+                            border: none
+                            color: $verde !important
+                            background: transparent
+                            &:focus
+                                border-width: 0
+                            &:hover
+                                border-width: 0
+                            &::after
+                                transform: scale(1)
+                    li
+                        +breakpoint($celular)
+                            width: 50%
+                            text-align: center
+                        a
+                            border: none
+                            font-size: 13px
+                            color: $cinza
+                            margin-right: 0 !important
+                            &:hover
+                                border: none
+                                color: $verde !important
+                                background: transparent
+                            &::after
+                                content: ""
+                                background: $verde
+                                height: 2px
+                                position: absolute
+                                width: 100%
+                                left: 0px
+                                bottom: -1px
+                                +transition(.3s)
+                                transform: scale(0)
+                        &:hover
+                            a
+                                &::after
+                                    transform: scale(1)    
+                .tab-pane
+                    padding: 15px 0
+                .tab-content
+                    +clearfix
+                    padding: 20px
+                    h3
+                        color: $verde
+                        margin-bottom: 25px
+                        text-transform: capitalize
+                                             
         .right
             float: right !important
             +make-md-column(3, 1)
@@ -53,6 +97,6 @@ section.trx
                 text-align: center
                 font-size: 30px
                 color: $amarelo
-                line-height: 60px
+                line-height: 30px
                 +breakpoint($celular)
                     color: $preto

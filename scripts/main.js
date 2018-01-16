@@ -29,9 +29,20 @@ $(document).ready(function(){
       })
 
 // modal
-      $('.modal-img').on('click',function() {
+      $('.modal-img').on('blur',function() {
         $('.imagepreview').attr('src', $(this).find('img').attr('src'))
-      })    
+      })
+
+// beneficios pilates
+      var active = false
+      $('.beneficio').click(function() {
+        active = !active
+        if (active) {
+          $(this).addClass("active")
+        } else {
+          $(this).removeClass("active")
+        }        
+      })
 
 //Scroll Menu desktop 
       $(window).on('scroll', function() {
