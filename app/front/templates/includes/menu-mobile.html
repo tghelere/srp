@@ -10,14 +10,16 @@
   <div class="open-menu hidden">
     <a href="#" class="close menu-open" title="Fechar"><i class="fa fa-close"></i></a>
     <img src="{$img}/logo-menu.png" alt="{$name}">
-    <div class="icons">
+    <div class="menu-list">
       <ul>
-        <li class="pi"><a href="{$rootUrl}/pilates/" title="Pilates"><span>Pilates</span></a></li>
-        <li class="po"><a href="{$rootUrl}/powerplate/" title="Power Plate"><span>Power Plate ®</span></a></li>
-        <li class="tr"><a href="{$rootUrl}/trx/" title="TRX - Treino em suspensão"><span>TRX <br>Treino em suspensão</span></a></li>
-        <li class="te"><a href="{$rootUrl}/terapias/" title="Terapias"><span>Terapias</span></a></li>
-        <li class="qu"><a href="{$rootUrl}/quemsomos/" title="Quem somos"><span>Quem somos</span></a></li>
-        <li class="co"><a href="{$rootUrl}/contato/" title="Contato"><span>Contato</span></a></li>
+        {nocache}
+        <li class="{if $thisController == 'pilates'}active{/if} pilates"><a title="Pilates" href="{$rootUrl}/pilates/">Pilates<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+        <li class="{if $thisController == 'powerplate'}active{/if} powerplate"><a title="Power Plate ®" href="{$rootUrl}/powerplate/">Power Plate ®<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+        <li class="{if $thisController == 'trx'}active{/if} trx"><a title="TRX - Treinamento em suspensão" href="{$rootUrl}/trx/">TRX - Treinamento em suspensão<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+        <li class="{if $thisController == 'terapias'}active{/if} terapias"><a title="Terapias Manuais" href="{$rootUrl}/terapias/">Terapias Manuais<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+        <li class="{if $thisController == 'quemsomos'}active{/if} quemsomos"><a title="Quem somos" href="{$rootUrl}/quemsomos/">Quem somos<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+        <li class="{if $thisController == 'contato'}active{/if} contato"><a title="Contato" href="{$rootUrl}/contato/">Contato<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+        {/nocache}
       </ul>
     </div>
   </div>

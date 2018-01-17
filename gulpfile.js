@@ -122,4 +122,4 @@ gulp.task('watch', () => {
 	gulp.watch('./img-style/**/*', ['imagemin-style'])	
 })
 
-gulp.task('default', ['cleanCache', 'mv-fonts', 'sass-minify', 'minify-js', 'hint', 'imagemin', 'imagemin-style', 'watch'])
+gulp.task('default', ['cleanCache', 'mv-fonts', 'sass-minify', 'minify-js', 'hint', /*'imagemin', 'imagemin-style',*/ 'watch'])
