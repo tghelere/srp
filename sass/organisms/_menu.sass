@@ -65,14 +65,21 @@
                     i                        
                         font-size: 22px
                         text-align: center
-    .open-menu                     
-        height: 100%
+                &.active i
+                    color: #00F5FF
+    .open-menu
         width: 100%
-        background-color: $azul        
+        background-color: $azul
         position: fixed
         top: 0
         left: 0
         z-index: 4
+        +breakpoint($celular-landscape)
+            overflow-y: scroll
+            padding-bottom: 100px
+            bottom: 0
+        +breakpoint($celular)
+            height: 100%
         a.close
             position: fixed
             top: 20px
@@ -84,16 +91,29 @@
         img
             +img-responsive
             margin: 0 auto
-            max-width: 60%
-            margin-top: 40px
-        .menu-list
+            max-width: 55%
             margin-top: 20px
+            +breakpoint($celular-landscape)
+                max-width: 200px
+        .menu-list
+            margin-top: 15px
+            +clearfix
             ul
+                +clearfix
                 li
                     height: 65px
                     border-bottom: 1px solid #047B90
+                    +breakpoint($celular-landscape)
+                        width: 50%
+                        float: left
+                    +breakpoint($celular)
+                        width: 100%
                     &:first-child
                         border-top: 1px solid #047B90
+
+                    &:nth-child(2)
+                        +breakpoint($celular-landscape)
+                            border-top: 1px solid #047B90   
                     a
                         line-height: 65px
                         display: block
