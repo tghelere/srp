@@ -1,8 +1,25 @@
 section.erro
-    .erro-msg
-        padding: 10% 0
-        h2
-            margin-bottom: 40px
-
-
-    
+    .erro-block
+        +clearfix
+        margin: 10% 0
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+        .erro-msg
+            +make-md-column(6, 1)
+            height: 100%
+            text-align: center
+            color: $azul
+            margin: 50px 0
+            h2
+                margin-bottom: 50px
+            a
+                font-size: 18pt
+        .bolas
+            +make-md-column(6, 1)
+            img
+                display: block
+                margin: 0 auto
+                max-width: 400px
+                +img-responsive

@@ -45,6 +45,8 @@ footer
                         line-height: 14px                        
                         &:hover
                             color: $verde
+        .social ul li.phone
+            margin-top: 10px
         .socials
             +breakpoint($tablet)
                 ul
@@ -53,7 +55,7 @@ footer
                         margin: 0 2% 1% 0            
             ul li
                 width: 30px
-                display: inline-block
+                display: inline-block                
                 a
                     height: 25px
                     width: 25px
@@ -73,6 +75,7 @@ footer
                             background-position: 0 -100px
                     span
                         display: none
+                
     .footer-bottom
         +clearfix
         width: 100%
@@ -83,6 +86,10 @@ footer
     .footer-mobile
         font-size: 11px
         // height: 300px
+        a.phone
+            margin: 10px 0
+            text-align: left !important
+            display: block
         ul.links
             width: 45%
             margin: 30px 0 20px 18%

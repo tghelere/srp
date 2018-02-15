@@ -1,9 +1,12 @@
 {include file="includes/header.html"}
-	<div class="container text-center">
-		<div class="row">
-			<div class="erro-msg">
+	<div class="container">
+		<div class="row erro-block">
+			<div class="erro-msg">				
 				<h2>{$erro}</h2>
-				<p><a class="btn btn-verde" role="button" href="{$rootUrl}" title="{$erroMsg}">{$erroMsg}</a></p>
+				<a href="{$rootUrl}" title="{$erroMsg}"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> {$erroMsg}</a>
+			</div>
+			<div class="bolas">
+				<img src="{$img}{$thisController}/bolas-404.png" alt="Erro 404" />				
 			</div>
 		</div>
 	</div>

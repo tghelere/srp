@@ -66,14 +66,15 @@ class Contato extends Controller {
                 }                
                 $mail->isHTML(true);
                 $mail->Subject = "Contato - ". NAME;
-                $mail->Body="<div style=\"max-width:600px;\">
-                             <img width=\"180\" height=\"180\" src=\"". IMG ."apple-touch-icon.png\" alt=\"". NAME ."\">
-                             <h3 style=\"font-family: sans-serif; color:#4d4d4d; margin:0;\">". NAME ."</h3>
-                             <p>Nome: <b style=\"color:#31c1cd; font-family: sans-serif; font-size:14px;\">".$dados['nome']."</b></p>
-                             <p>E-mail: <b style=\"color:#31c1cd; font-family: sans-serif; font-size:14px;\">".$dados['email']."</b></p>
-                             <p>Telefone: <b style=\"color:#31c1cd; font-family: sans-serif; font-size:14px;\">".$dados['fone']."</b></p>
-                             <p>Mensagem:</p>
-                             <p style=\"color:#31c1cd; font-family: sans-serif; font-size:14px;\">".$dados['msg']."</p>
+                $mail->Body="<div style=\"max-width:600px; font-family: sans-serif;\">                             
+                             <h4 style=\"color:#4d4d4d; margin:0;\">Mensagem para ". NAME ." | Origem: Formulário de contato do site:</h4>
+                             <div style=\"padding: 10px; margin: 10px 0; border: 1px solid #31c1cd; \">
+                             <p>".$dados['msg']."</p>
+                             </div>
+                             <p>REMETENTE</p>
+                             <p>Nome: ".$dados['nome']."</p>
+                             <p>E-mail: ".$dados['email']."</p>
+                             <p>Telefone: ".$dados['fone']."</p>
                              </div>";
                 $mail->AltBody = "Contato através do site ". NAME ."\n Nome: ".$dados['nome']."\n E-mail: ".$dados['email']."\n Telefone: ".$dados['fone']."\n Mensagem:".$dados['msg'];
                 // print_r($mail);exit;

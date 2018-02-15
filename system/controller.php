@@ -34,7 +34,11 @@ class Controller extends System {
             $this->css = file(ROOTPATH."/assets/css/home.css");
             $this->smarty->assign("thisController", 'home');
         } else {
-            $this->css = file(ROOTPATH."/assets/css/" . $this->_controller . ".css");
+            if (file_exists(ROOTPATH."/assets/css/" . $this->_controller . ".css")) {
+                $this->css = file(ROOTPATH."/assets/css/" . $this->_controller . ".css");
+            }else{
+                $this->css = file(ROOTPATH."/assets/css/erro.css");                
+            }          
             $this->smarty->assign("thisController", $this->_controller);
         }        
 		$this->smarty->assign("cssContent", $this->css[0]);
