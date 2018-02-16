@@ -14,9 +14,9 @@ class Powerplate extends Controller {
 
 		$this -> smarty -> assign("banners", $banners_lista);
 
-		$this -> smarty -> assign("title", NAME." – Power Plate");
-		$this -> smarty -> assign("description", "Saiba mais sobre o Power Plante e seus benefícios como o fortalecimento ósseo e prevenção de osteoporose.");
-		$this -> smarty -> assign("keywords", "Power Plate, fortalecimento ósseo, Osteopenia, osteoporose, reduz celulite, força, resistência, circulação sanguínea, previne osteoporose, idosos, atletas, adultos, adolescentes, plataforma vibratória");
+		$this -> smarty -> assign("title", NAME." - Power Plate® em Maringá");
+		$this -> smarty -> assign("description", "Tecnologia vibratória desenvolvida pela NASA, melhora a massa óssea e a força muscular - Para todas as idades. Agende sua aula experimental");
+		$this -> smarty -> assign("keywords", "Power Plate, força muscular, anti-celulite, melhora a circulação, alivio de dor, massa óssea, idosos, power plate para atletas, power plate para idosos, power plate para terceira idade");
 		
 
 		if (DEVICE == "mobile") {

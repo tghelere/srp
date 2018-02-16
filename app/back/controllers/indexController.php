@@ -8,9 +8,9 @@ class Index extends Controller {
 
 		$this -> smarty -> assign("banners", $banners_lista);
 
-		$this -> smarty -> assign("title", NAME." - Home");
-		$this -> smarty -> assign("description", "O Studio Raquel Pagani é pioneiro no Pilates e Power Plate em Maringá. Desde 2002. Acreditamos na conscientização corporal em busca do bem-estar e alívio de dor crônica.");
-		$this -> smarty -> assign("keywords", "Estudio, pilates, power plate, trx, rpg, osteopatia, “drenagem linfática”, fisioterapia, recuperação, bem estar, idosos, atletas, treinamento funcional, “Pilates aéreo”, ioga, dor crônica, fibromialgia, aeropilates, maringá, paraná, “aula de Pilates”, “Pilates solo”, “benefícios do Pilates”, “Pilates maringá”, “artrite reumatoide”, artrose, Osteopenia, osteoporose, “hérnia de disco”, “mercadinho do studio”, Detox, fortalecimento.");
+		$this -> smarty -> assign("title", NAME." - Centro de Bem Estar em Maringá desde 2002");
+		$this -> smarty -> assign("description", "Atendimento terapêutico para dor crônica, correção postural e conscientização corporal. Para todas as idades - Conheça nosso Studio!");
+		$this -> smarty -> assign("keywords", "Pilates, pilates em maringá, Pilates para idosos, Osteopatia, fisioterapia, dor crônica, correção postural, trx, Power Plate, power plate em maringá, Raquel Pagani, Studio Raquel Pagani, RPG em maringá, terapia, dor no quadril, dor crescimento, articulações, terceira idade");
 
 		if (DEVICE == "mobile") {
 			$this -> smarty -> display("mobile/home.html");

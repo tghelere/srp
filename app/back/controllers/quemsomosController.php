@@ -7,9 +7,9 @@ class Quemsomos extends Controller {
 
 		$this -> smarty -> assign("banners", $banners_lista);
 
-		$this -> smarty -> assign("title", NAME." – Quem Somos");
-		$this -> smarty -> assign("description", "Conheça o Studio Raquel Pagani em Maringá – ambiente de 450 m², planejado para te proporcionar uma incrível experiência.");
-		$this -> smarty -> assign("keywords", "Studio Raquel Pagani, desde 2002, primeiro em maringá, dor crônica, tratamento terapêutico, alívio de dor, Pilates, power plate, trx, terapias diversas, Drenagem linfática, lipo redux, acupuntura, massoterapia, rpg, osteopatia, massoterapia, shiatsu, reflexologia, bem estar, quiropraxia, seriedade, compromisso, estrutura, nova sede, 450 metros, bem estar, centro de bem estar, idosos, atletas, referência em maringá, seriedade.");
+		$this -> smarty -> assign("title", NAME." - Sobre nosso studio e equipe - desde 2002");
+		$this -> smarty -> assign("description", "Desde 2002, especialistas em alta qualidade no serviço oferecido no atendimento e foco no tratamento da dor e atividade terapêutica.");
+		$this -> smarty -> assign("keywords", "Especialista em Pilates, Pilates, Tratamento da dor, Power Plate, Centro de bem estar, equilibrio do corpo, saúde, fisioterapia, terceira idade, mulher, Dor cronica, clinica de pilates, academia de pilates em maringá, pilates em maringá");
 
 		
 		if (DEVICE == "mobile") {

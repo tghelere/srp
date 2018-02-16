@@ -15,9 +15,9 @@ class Contato extends Controller {
         $banners = new BannersModel();
         $banners_lista = $banners -> listaBanners('contato');
         $this -> smarty -> assign("banners", $banners_lista);
-        $this -> smarty -> assign("title", NAME." – Contato ");
-        $this -> smarty -> assign("description", "Fale conosco e tire suas todas as suas dúvidas! Studio Raquel Pagani – Desde 2002 em Maringá");
-        $this -> smarty -> assign("keywords", "Fale conosco, contato, studio Raquel pagani, Pilates");
+        $this -> smarty -> assign("title", NAME." - Fale conosco");
+        $this -> smarty -> assign("description", "Fale conosco, tire suas dúvidas. Pilates, Power Plate, RPG, TRX em Maringá");
+        $this -> smarty -> assign("keywords", "Pilates em Maringá, aula experimental de pilates, power plate em maringá, como chegar, studio raquel pagani, studio de pilates, fisioterapia em maringá");
         $this->session->deleteSession("contato");
 
         

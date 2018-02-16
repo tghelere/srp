@@ -14,9 +14,9 @@ class Pilates extends Controller {
 
 		$this -> smarty -> assign("banners", $banners_lista);
 
-		$this -> smarty -> assign("title", NAME." – Pilates desde 2002");
-		$this -> smarty -> assign("description", "“Seu corpo é seu maior bem, ele guarda e reflete sua alma. Cuide dele como se fosse uma pedra preciosa e nós o lapidaremos” Joseph Pilates");
-		$this -> smarty -> assign("keywords", "“Pilates solo”, “Pilates aéreo”, aeropilates, “mat Pilates”, joseph Pilates, ioga, “Pilates para adolescentes”, “Pilates para gestantes”, “Pilates para idosos”, “power house”, equilíbrio, artrite, artrose, “dor lombar”, fortalecimento, “reeducação postural”, “alívio do stress”, “dor nas costas”, “dor na coluna”, Pilates ");
+		$this -> smarty -> assign("title", NAME." - Pilates em Maringá");
+		$this -> smarty -> assign("description", "Desde 2002, Pilates é nossa especialidade, em todos os níveis e para todos os condicionamentos físicos - faça uma aula experimental");
+		$this -> smarty -> assign("keywords", "Pilates, pilates terapêutico, correção postural, osteopatia, osteopenia, alivio de dores, pilates para terceira idade, pilates para adolescentes, pilates na gravidez, pilates para atletas, pilates para sedentários, reeducação postural");
 		
 
 		if (DEVICE == "mobile") {

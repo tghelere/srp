@@ -7,9 +7,9 @@ class Terapias extends Controller {
 
 		$this -> smarty -> assign("banners", $banners_lista);
 
-		$this -> smarty -> assign("title", NAME." – Terapias");
-		$this -> smarty -> assign("description", "Se dê esse presente! Conheça nossas terapias diversas que podem te auxiliar – acupuntura, RPG, massoterapia, lipo redux e mais.");
-		$this -> smarty -> assign("keywords", "Drenagem linfática, lipo redux, acupuntura, massoterapia, rpg, osteopatia, massoterapia, shiatsu, reflexologia, bem estar, quiropraxia");
+		$this -> smarty -> assign("title", NAME." - Centro de Bem Estar");
+		$this -> smarty -> assign("description", "RPG, massoterapia, acupuntura, drenagem linfática, lipoescultura nas mãos de especialistas para o seu bem estar");
+		$this -> smarty -> assign("keywords", "RPG, massoterapia, acupuntura, drenagem linfática, lipo escultura, drenagem linfática em maringá, rpg em maringá, lipo escultura em maringá, reeducação postural");
 
 		
 		if (DEVICE == "mobile") {
